@@ -11,14 +11,12 @@
     $pageContent = $paginas[$page];
 
     function configurateGet($get) {
-        if (homeCase($get)) {
-            $get = ['page' => 'home'];
-        }
+        if (homeCase($get)) $get['page'] = 'home';
         return $get;
     }
 
     function homeCase($get) {
-        return $get == [] || $get['page'] == '';
+        return $get == [] || $get['page'] == '' || $get['page'] == 'home';
     }
 ?>
 
@@ -34,8 +32,10 @@
         <h1>MIA</h1>
         <nav>
             <?php 
-                foreach ($paginas as $link => $value) {
-                    echo "<a href='?page=$link'>$link</a>";
+                foreach ($paginas as $linkName => $value) {
+                    $link = $linkName;
+                    if ($link == 'home') echo "<a href='/'>$linkName</a>";
+                    else echo "<a href='?page=$link'>$linkName</a>";
                 }
             ?>
         </nav>
