@@ -1,9 +1,5 @@
-<?php 
-    $pages = [
-        'home' => '<h1>Página home, seja bem vindo</h1>',
-        'doces' => '<h1>Página dos doces, escolha o que você desejar</h1>',
-        'error' => '<h1>Erro 404</h1>'
-    ];
+<?php
+    $pages = ['home', 'doces', 'error'];
 ?>
 
 <?php
@@ -21,7 +17,6 @@
     }
 
     $page = selectPage($url);
-    $pageContent = $pages[$page];
 ?>
 
 <!DOCTYPE html>
@@ -47,8 +42,7 @@
     </header>
     <main>
         <?php
-            echo $pageContent;
-            echo $_SERVER["REQUEST_URI"];
+            include_once('sections/' . $page . '.php');
         ?>
     </main>
     <footer>
