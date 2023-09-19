@@ -20,9 +20,9 @@
     $url  = $_SERVER["REQUEST_URI"];
     function selectPage($url) {
         switch ($url) {
-            case 'index.php/':
+            case '/index.php':
                 return 'home';
-            case 'index.php/doces':
+            case '/index.php/doces':
                 return 'doces';
             default:
                 return 'error';
