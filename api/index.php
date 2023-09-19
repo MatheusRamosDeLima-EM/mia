@@ -7,23 +7,13 @@
 ?>
 
 <?php
-    // $getParamethers = configurateGet($_GET);
-    
-    // function configurateGet($get) {
-    //     if (homeCase($get)) $get['page'] = 'home';
-    //     return $get;
-    // }
-
-    // function homeCase($get) {
-    //     return $get == [] || $get['page'] == '' || $get['page'] == 'home';
-    // }
     $url  = $_SERVER["REQUEST_URI"];
     function selectPage($url) {
         $url = trim($url, '/');
     
         if ($url == '/' || $url == '' || $url == 'index.php') {
             return 'home';
-        } else if ($url == 'doces') {
+        } else if ($url == 'doces' || $url == 'index.php/doces') {
             return 'doces';
         } else {
             return 'error';
