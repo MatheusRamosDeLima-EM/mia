@@ -21,7 +21,7 @@
     function selectPage($url) {
         $url = trim($url, '/');
     
-        if ($url == '/') {
+        if ($url == '/' || $url == '' || $url == 'index.php') {
             return 'home';
         } else if ($url == 'doces') {
             return 'doces';
