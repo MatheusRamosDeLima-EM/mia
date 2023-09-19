@@ -1,5 +1,5 @@
 <?php 
-    $paginas = [
+    $pages = [
         'home' => '<h1>Página home, seja bem vindo</h1>',
         'doces' => '<h1>Página dos doces, escolha o que você desejar</h1>',
         'error' => '<h1>Erro 404</h1>'
@@ -11,7 +11,7 @@
     function selectPage($url) {
         $url = trim($url, '/');
     
-        if ($url == '/' || $url == '' || $url == 'index.php') {
+        if ($url == '' || $url == 'index.php') {
             return 'home';
         } else if ($url == 'doces' || $url == 'index.php/doces') {
             return 'doces';
@@ -21,7 +21,7 @@
     }
 
     $page = selectPage($url);
-    $pageContent = $paginas[$page];
+    $pageContent = $pages[$page];
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +36,7 @@
         <h1>MIA</h1>
         <nav>
             <?php 
-                foreach ($paginas as $linkName => $value) {
+                foreach ($pages as $linkName => $value) {
                     $link = $linkName;
                     if ($link == 'home') echo "<a href='/'>$linkName</a>";
                     else if ($link == 'error') echo "";
