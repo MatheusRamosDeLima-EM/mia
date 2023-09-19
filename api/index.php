@@ -19,9 +19,9 @@
     // }
     $url  = $_SERVER["REQUEST_URI"];
     function selectPage($url) {
-        if ($url == ('/index.php' || `/index.php/` || '/')) {
+        if ($url == ('/' || '/index.php' || '/index.php/')) {
             return 'home';
-        } else if ($url == ('/index.php/doces' || '/index.php/doces/')) {
+        } else if ($url == ('/doces' || '/doces/' || '/index.php/doces' || '/index.php/doces/')) {
             return 'doces';
         } else {
             return 'error';
