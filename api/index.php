@@ -19,13 +19,17 @@
     // }
     $url  = $_SERVER["REQUEST_URI"];
     function selectPage($url) {
+        if ($url == ('/index.php' || `/index.php/` || '/')) {
+            return 'home';
+        } else if ($url == ('/index.php/doces' || '/index.php/doces/')) {
+            return 'doces';
+        } else {
+            return 'error';
+        }
         switch ($url) {
             case '/index.php':
-                return 'home';
             case '/index.php/doces':
-                return 'doces';
             default:
-                return 'error';
         }
     }
 
@@ -49,7 +53,7 @@
                     $link = $linkName;
                     if ($link == 'home') echo "<a href='/'>$linkName</a>";
                     else if ($link == 'error') echo "";
-                    else echo "<a href='/$link'>$linkName</a>";
+                    else echo "<a href='index.php/$link'>$linkName</a>";
                 }
             ?>
         </nav>
