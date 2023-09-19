@@ -50,7 +50,7 @@
                     $link = $linkName;
                     if ($link == 'home') echo "<a href='/'>$linkName</a>";
                     else if ($link == 'error') echo "";
-                    else echo "<a href='index.php/$link'>$linkName</a>";
+                    else echo "<a href='/$link'>$linkName</a>";
                 }
             ?>
         </nav>
