@@ -30,8 +30,8 @@
     <header>
         <h1>MIA</h1>
         <nav>
-            <?php 
-                foreach ($pages as $linkName => $value) {
+            <?php
+                foreach ($pages as $linkName) {
                     $link = $linkName;
                     if ($link == 'home') echo "<a href='/'>$linkName</a>";
                     else if ($link == 'error') echo "";
