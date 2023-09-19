@@ -1,23 +1,36 @@
 <?php 
     $paginas = [
         'home' => '<h1>Página home, seja bem vindo</h1>',
-        'doces' => '<h1>Página dos doces, escolha o que você desejar</h1>'
+        'doces' => '<h1>Página dos doces, escolha o que você desejar</h1>',
+        'error' => '<h1>Erro 404</h1>'
     ];
 ?>
 
 <?php
-    $getParamethers = configurateGet($_GET);
-    $page = $getParamethers['page'];
+    // $getParamethers = configurateGet($_GET);
+    
+    // function configurateGet($get) {
+    //     if (homeCase($get)) $get['page'] = 'home';
+    //     return $get;
+    // }
+
+    // function homeCase($get) {
+    //     return $get == [] || $get['page'] == '' || $get['page'] == 'home';
+    // }
+    $url  = $_SERVER["REQUEST_URI"];
+    function selectPage($url) {
+        switch ($url) {
+            case 'index.php/':
+                return 'home';
+            case 'index.php/doces':
+                return 'doces';
+            default:
+                return 'error';
+        }
+    }
+
+    $page = selectPage($url);
     $pageContent = $paginas[$page];
-
-    function configurateGet($get) {
-        if (homeCase($get)) $get['page'] = 'home';
-        return $get;
-    }
-
-    function homeCase($get) {
-        return $get == [] || $get['page'] == '' || $get['page'] == 'home';
-    }
 ?>
 
 <!DOCTYPE html>
@@ -35,15 +48,16 @@
                 foreach ($paginas as $linkName => $value) {
                     $link = $linkName;
                     if ($link == 'home') echo "<a href='/'>$linkName</a>";
-                    else echo "<a href='?page=$link'>$linkName</a>";
+                    else if ($link == 'error') echo "";
+                    else echo "<a href='/$link'>$linkName</a>";
                 }
             ?>
         </nav>
     </header>
     <main>
-        <p>Teste site estático usando php</p>
         <?php
             echo $pageContent;
+            echo $_SERVER["REQUEST_URI"];
         ?>
     </main>
     <footer>
