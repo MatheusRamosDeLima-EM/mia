@@ -26,11 +26,6 @@
         } else {
             return 'error';
         }
-        switch ($url) {
-            case '/index.php':
-            case '/index.php/doces':
-            default:
-        }
     }
 
     $page = selectPage($url);
