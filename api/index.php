@@ -1,22 +1,22 @@
 <?php
-    $pages = ['home', 'doces', 'error'];
+    $pages = ['home', 'doces', 'sobre', 'contato', 'error'];
 ?>
 
 <?php
     $url  = $_SERVER["REQUEST_URI"];
-    function selectPage($url) {
+    function selectPage($url, $pages) {
         $url = trim($url, '/');
-    
-        if ($url == '' || $url == 'index.php') {
-            return 'home';
-        } else if ($url == 'doces' || $url == 'index.php/doces') {
-            return 'doces';
-        } else {
+        
+        if ($url == '' || $url == 'index.php') return 'home';
+        else {
+            foreach ($pages as $currentlyPage) {
+                if ($url == $currentlyPage || $url == "index.php/$currentlyPage") return $currentlyPage;
+            }
             return 'error';
         }
     }
 
-    $page = selectPage($url);
+    $page = selectPage($url, $pages);
 ?>
 
 <!DOCTYPE html>
@@ -24,20 +24,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset css */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+            background-color: #f0f0f0;
+            box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.363);
+            height: 64px;
+        }
+
+        #menu-list {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+        }
+
+        #menu-list a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
     <title>MIA - Loja de doces</title>
 </head>
 <body>
     <header>
         <h1>MIA</h1>
         <nav>
-            <?php
-                foreach ($pages as $linkName) {
-                    $link = $linkName;
-                    if ($link == 'home') echo "<a href='/'>$linkName</a>";
-                    else if ($link == 'error') echo "";
-                    else echo "<a href='/$link'>$linkName</a>";
-                }
-            ?>
+            <ul id="menu-list">
+                <?php 
+                    foreach ($pages as $linkName) {
+                        $link = $linkName;
+                        $linkName = ucfirst($linkName);
+                        if ($link == 'home') echo "<li><a href='/'>$linkName</a></li>";
+                        else if ($link == 'error') echo "";
+                        else echo "<li><a href='/$link'>$linkName</a></li>";
+                    }
+                ?>
+            </ul>
         </nav>
     </header>
     <main>
