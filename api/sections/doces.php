@@ -47,9 +47,9 @@
 <style>
     #products {
         display: grid;
-        grid-template-columns: 200px 200px 200px;
+        grid-template-columns: 200px;
         gap: 100px;
-    	width: 800px;
+    	width: 200px;
         margin: 20px auto;
     }
 
@@ -85,5 +85,21 @@
 
     .product-description {
         font-size: 16px;
+    }
+
+    @media only screen and (min-width: 600px) {
+        #products {
+            grid-template-columns: 200px 200px;
+            gap: 100px;
+            width: 500px;
+        }
+    }
+
+    @media only screen and (min-width: 900px) {
+        #products {
+            grid-template-columns: 200px 200px 200px;
+            gap: 100px;
+            width: 800px;
+        }
     }
 </style>
