@@ -9,17 +9,17 @@
         $products = json_decode(file_get_contents("products.json"));
         print_r($products);
         var_dump($products);
-        foreach ($products as $p => $info) {
-            echo "
-                <a href='doces/info?product=$p' class='product'>
-                    <img src='{$info->img}'>
-                    <div class='info'>
-                        <h2 class='product-title'>{$info->name}</h2>
-                        <p class='product-description'>{$info->description}</p>
-                    </div>
-                </a>
-            ";
-        }
+        // foreach ($products as $p => $info) {
+        //     echo "
+        //         <a href='doces/info?product=$p' class='product'>
+        //             <img src='{$info->img}'>
+        //             <div class='info'>
+        //                 <h2 class='product-title'>{$info->name}</h2>
+        //                 <p class='product-description'>{$info->description}</p>
+        //             </div>
+        //         </a>
+        //     ";
+        // }
     ?>
 </section>
 
