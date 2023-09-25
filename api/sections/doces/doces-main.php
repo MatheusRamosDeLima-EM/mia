@@ -23,7 +23,7 @@
     ?>
 </section>
 
-<style>
+<!-- <style>
     #products {
         display: grid;
         grid-template-columns: 200px;
@@ -81,4 +81,4 @@
             width: 800px;
         }
     }
-</style>
+</style> -->
