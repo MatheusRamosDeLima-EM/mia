@@ -30,8 +30,8 @@
     $url = $_SERVER["REQUEST_URI"];
     function selectDocesPage($url) {
         $url = trim($url, '/');
-        if ($url ==='programas/mia/index.php/doces') return 'doces-main';
-        else if (strpos($url, 'programas/mia/index.php/doces/info') === 0) return 'doces-info';
+        if ($url ==='doces') return 'doces-main';
+        else if (strpos($url, 'doces/info') === 0) return 'doces-info';
     }
     $pageDoces = selectDocesPage($url);
 ?>
