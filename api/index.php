@@ -7,10 +7,11 @@
     function selectPage($url, $pages) {
         $url = trim($url, '/');
         
-        if ($url == '' || $url == 'index.php') return 'home';
+        if ($url == '') return 'home';
+        else if (strpos($url, 'doces/') === 0) return 'doces';
         else {
             foreach ($pages as $currentlyPage) {
-                if ($url == $currentlyPage || $url == "index.php/$currentlyPage") return $currentlyPage;
+                if ($url == $currentlyPage) return $currentlyPage;
             }
             return 'error';
         }
@@ -78,7 +79,7 @@
     </header>
     <main>
         <?php
-            include_once('sections/' . $page . '.php');
+            include_once("sections/$page.php");
         ?>
     </main>
     <footer>
