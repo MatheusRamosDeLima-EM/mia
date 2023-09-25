@@ -16,18 +16,20 @@
     $beijinho = new Product('Beijinho', 4, 'img/beijinho.png', '');
     $bolodepote = new Product('Bolo de pote', 10.20, 'img/bolodepote.png', 'O melhor bolo de pote');
 
+    global $products;
+
     $products = [
         'brigadeiro' => $brigadeiro,
         'beijinho' => $beijinho,
         'bolodepote' => $bolodepote,
     ];
 
-    $jsonProducts = json_encode($products);
-    $productsFile = 'products.json';
-    if (!file_exists($productsFile)) {
-        touch($productsFile);
-    }
-    file_put_contents("products.json", $jsonProducts);
+    // $jsonProducts = json_encode($products);
+    // $productsFile = 'products.json';
+    // if (!file_exists($productsFile)) {
+    //     touch($productsFile);
+    // }
+    // file_put_contents("products.json", $jsonProducts);
 ?>
 
 <?php 
