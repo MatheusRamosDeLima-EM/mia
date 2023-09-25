@@ -7,14 +7,14 @@
         // $products = json_decode(file_get_contents("products.json"));
         foreach ($products as $p => $info) {
             echo "
-                <div id='$p' class='product'>
+                <a href='?p=$p' id='$p' class='product'>
                     <img src='{$info->img}'>
                     <div class='info'>
                         <h2 class='product-title'>{$info->name}</h2>
                         <p class='product-price'>R$ ".$info->price."</p>
                         <p class='product-description'>{$info->description}</p>
                     </div>
-                </div>
+                </a>
             ";
         }
     ?>
