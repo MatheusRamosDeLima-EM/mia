@@ -1,7 +1,7 @@
 <?php 
     function getProductAttributes($products) {
         $product = $_GET['p'];
-        $productAttributes = $products->$product;
+        $productAttributes = $products[$product];
         return $productAttributes;
     }
 
