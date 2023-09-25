@@ -7,7 +7,7 @@
         foreach ($products as $p => $info) {
             echo "
                 <a href='doces/info?product=$p' class='product'>
-                    <img src='{$info->image}'>
+                    <img src='{$info->img}'>
                     <div class='info'>
                         <h2 class='product-title'>{$info->name}</h2>
                         <p class='product-description'>{$info->description}</p>
