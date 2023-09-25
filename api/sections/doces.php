@@ -23,6 +23,10 @@
     ];
 
     $jsonProducts = json_encode($products);
+    $productsFile = 'products.json';
+    if (!file_exists($productsFile)) {
+        touch($productsFile);
+    }
     file_put_contents("products.json", $jsonProducts);
 ?>
 
@@ -32,8 +36,12 @@
         $url = trim($url, '/');
         if ($url ==='doces') return 'doces-main';
         else if (strpos($url, 'doces/info') === 0) return 'doces-info';
+        else return null;
     }
     $pageDoces = selectDocesPage($url);
 ?>
 
-<?php include_once("doces/$pageDoces.php"); ?>
+<?php
+    if ($pageDoces === null) include_once("error.php");
+    else include_once("doces/$pageDoces.php");
+?>
