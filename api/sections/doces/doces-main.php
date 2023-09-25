@@ -3,7 +3,8 @@
     
 </section>
 <section id="products">
-    <?php 
+    <?php
+        $products = json_decode(file_get_contents("products.json"));
         foreach ($products as $p => $info) {
             echo "
                 <div id='$p' class='product'>
