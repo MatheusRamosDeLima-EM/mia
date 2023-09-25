@@ -4,14 +4,13 @@
 </section>
 <section id="products">
     <?php
-        // $products = json_decode(file_get_contents("products.json"));
+        $products = json_decode(file_get_contents("products.json"));
         foreach ($products as $p => $info) {
             echo "
-                <a href='doces/info?p=$p' id='$p' class='product'>
+                <a href='doces/info?product=$p' class='product'>
                     <img src='{$info->img}'>
                     <div class='info'>
                         <h2 class='product-title'>{$info->name}</h2>
-                        <p class='product-price'>R$ ".$info->price."</p>
                         <p class='product-description'>{$info->description}</p>
                     </div>
                 </a>
