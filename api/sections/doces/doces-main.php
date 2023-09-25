@@ -4,7 +4,7 @@
 </section>
 <section id="products">
     <?php
-        $products = json_decode(file_get_contents("products.json"));
+        $products = json_decode(file_get_contents("/api/products.json"));
         foreach ($products as $p => $info) {
             echo "
                 <a href='doces/info?product=$p' class='product'>
