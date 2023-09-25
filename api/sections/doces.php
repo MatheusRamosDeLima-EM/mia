@@ -36,4 +36,4 @@
     $pageDoces = selectDocesPage($url);
 ?>
 
-<?php include_once("sections/doces/$pageDoces.php"); ?>
+<?php include_once("doces/$pageDoces.php"); ?>
