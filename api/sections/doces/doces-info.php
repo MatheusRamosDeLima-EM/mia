@@ -1,5 +1,4 @@
 <?php 
-    $products = json_decode(file_get_contents("/api/products.json"));
     function getProductAttributes($products) {
         $product = $_GET['product'];
         return $products->$product;
