@@ -1,4 +1,5 @@
-<?php 
+<?php
+    $products;
     function getProductAttributes($products) {
         $product = $_GET['product'];
         return $products->$product;
