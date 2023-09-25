@@ -4,7 +4,6 @@
 </section>
 <section id="products">
     <?php
-        echo $products;
         // $products = json_decode(file_get_contents("products.json"));
         foreach ($products as $p => $info) {
             echo "
