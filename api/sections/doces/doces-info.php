@@ -1,4 +1,6 @@
 <?php 
+    include_once("products.php");
+
     function getProductAttributes($products) {
         $product = $_GET['product'];
         return $products->$product;

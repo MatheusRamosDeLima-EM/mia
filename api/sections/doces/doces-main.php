@@ -4,6 +4,8 @@
 </section>
 <section id="products">
     <?php
+        include_once("products.php");
+
         foreach ($products as $p => $info) {
             echo "
                 <a href='doces/info?product=$p' class='product'>
