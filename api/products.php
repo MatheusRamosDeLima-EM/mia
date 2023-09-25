@@ -19,17 +19,17 @@
             'O doce mais famoso e o mais querido de todo o Brasil.',
             'img/brigadeiro.png',
         ),
-        "beijinho"=> new Product (
+        "beijinho" => new Product (
             "Beijinho",
             4,
             "Aquele gosto de coco beira mar.",
             "img/beijinho.png",
         ),
-        "bolo-de-pote"=> [
+        "bolo-de-pote" => new Product (
             "Bolo de pote",
             10.2,
             "O melhor bolo de pote artesanal.",
             "img/bolo-de-pote.png",
-        ]
+        )
     ];
 ?>
