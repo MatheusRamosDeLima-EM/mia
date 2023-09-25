@@ -6,9 +6,30 @@
     <?php
         print_r(json_decode(file_get_contents("products.json")));
         var_dump(json_decode(file_get_contents("products.json")));
+
+        $products = [
+            "brigadeiro" => [
+                "name"=>  "Brigadeiro",
+                "price"=> 5.3,
+                "img"=> "img/brigadeiro.png",
+                "description"=> "O doce mais famoso e o mais querido de todo o Brasil."
+            ],
+            "beijinho"=> [
+                "name"=>  "Beijinho",
+                "price"=> 4,
+                "img"=> "img/beijinho.png",
+                "description"=> "Aquele gosto de coco beira mar."
+            ],
+            "bolo-de-pote"=> [
+                "name"=>  "Bolo de pote",
+                "price"=> 10.2,
+                "img"=> "img/bolo-de-pote.png",
+                "description"=> "O melhor bolo de pote artesanal."
+            ]
+        ];
         // $products = json_decode(file_get_contents("products.json"));
-        // print_r($products);
-        // var_dump($products);
+        print_r($products);
+        var_dump($products);
         // foreach ($products as $p => $info) {
         //     echo "
         //         <a href='doces/info?product=$p' class='product'>
