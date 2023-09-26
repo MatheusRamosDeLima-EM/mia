@@ -27,6 +27,22 @@
         margin: 20px auto;
     }
 
+    @media only screen and (min-width: 600px) {
+        #products {
+            grid-template-columns: 200px 200px;
+            gap: 100px;
+            width: 500px;
+        }
+    }
+
+    @media only screen and (min-width: 900px) {
+        #products {
+            grid-template-columns: 200px 200px 200px;
+            gap: 100px;
+            width: 800px;
+        }
+    }
+
     .product {
         width: 200px;
         height: 300px;
@@ -59,21 +75,5 @@
 
     .product-description {
         font-size: 16px;
-    }
-
-    @media only screen and (min-width: 600px) {
-        #products {
-            grid-template-columns: 200px 200px;
-            gap: 100px;
-            width: 500px;
-        }
-    }
-
-    @media only screen and (min-width: 900px) {
-        #products {
-            grid-template-columns: 200px 200px 200px;
-            gap: 100px;
-            width: 800px;
-        }
     }
 </style>

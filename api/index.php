@@ -36,21 +36,81 @@
         /* Header */
         header {
             display: flex;
-            flex-direction: row;
+            flex-direction: row-reverse;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
 
             background-color: #f0f0f0;
-            box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.363);
+            box-shadow: 3px 0 3px 3px rgba(0, 0, 0, 0.363);
+            width: 100%;
             height: 64px;
+        }
+
+        header h1 {
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        #menu-button {
+            color: black;
+            font-size: 16px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            margin: 5px;
         }
 
         #menu-list {
             list-style-type: none;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
-            gap: 30px;
+            justify-content: space-evenly;
+            gap: 0;
+            position: absolute;
+            left: 0;
+            top: 64px;
+            width: 60vw;
+            height: calc(100vh - 64px);
+            background-color: #f0f0f0;
+            box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.363);
+            z-index: 1;
+        }
+
+        #menu-list a {
+            padding: 30px 100px;
+        }
+        
+        @media only screen and (min-width: 500px) {
+            header {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            header h1 {
+                margin: 0;
+            }
+
+            #menu-button {
+                display: none;
+            }
+
+            #menu-list {
+                flex-direction: row;
+                justify-content: center;
+                gap: 25px;
+                position: static;
+                width: fit-content;
+                height: fit-content;
+                box-shadow: 0 0 0 0;
+            }
+
+            #menu-list a {
+                padding: 10px;
+            }
         }
 
         #menu-list a {
@@ -64,6 +124,7 @@
     <header>
         <h1>MIA</h1>
         <nav>
+            <div id="menu-button">PHP</div>
             <ul id="menu-list">
                 <?php 
                     foreach ($pages as $linkName) {
