@@ -39,6 +39,8 @@
             flex-direction: row-reverse;
             align-items: center;
             justify-content: space-between;
+            position: fixed;
+            top: 0;
 
             background-color: #f0f0f0;
             box-shadow: 3px 0 3px 3px rgba(0, 0, 0, 0.363);
@@ -86,6 +88,8 @@
 
         #menu-list a {
             padding: 30px 100px;
+            text-decoration: none;
+            color: black;
         }
         
         @media only screen and (min-width: 550px) {
@@ -118,9 +122,9 @@
             }
         }
 
-        #menu-list a {
-            text-decoration: none;
-            color: black;
+        /* Main */
+        main {
+            margin-top: 64px;
         }
     </style>
     <title>MIA - Loja de doces</title>
