@@ -65,7 +65,7 @@
 
         #menu-list {
             list-style-type: none;
-            display: flex;
+            display: none;
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
@@ -80,11 +80,15 @@
             z-index: 1;
         }
 
+        #menu-list.active {
+            display: flex;
+        }
+
         #menu-list a {
             padding: 30px 100px;
         }
         
-        @media only screen and (min-width: 500px) {
+        @media only screen and (min-width: 550px) {
             header {
                 flex-direction: row;
                 justify-content: space-around;
@@ -99,6 +103,7 @@
             }
 
             #menu-list {
+                display: flex;
                 flex-direction: row;
                 justify-content: center;
                 gap: 25px;
