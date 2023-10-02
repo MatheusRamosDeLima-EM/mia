@@ -1,12 +1,26 @@
 <?php
-    function getProductAttributes($products) {
-        $product = $_GET['product'];
-        return $products[$product];
+    function verifyGetP($products, $productId) {
+        foreach ($products as $productsId => $productsAttr) {
+            if ($productsId === $productId) return true;
+        }
+        return false;
     }
 
-    $product = getProductAttributes($products);
-    echo "<h1>{$product->name}</h1>";
-    echo "<img href='{$product->img}'>";
-    echo "<p>{$product->description}</p>";
-    echo "<p>R$ {$product->price}</p>";
+    function getProductAttributes($products) {
+        $productId = $_GET['p'];
+        return $products[$productId];
+    }
+
+    if (verifyGetP($products, $_GET['p'])) {
+        $product = getProductAttributes($products);
+        $pageInfo = "
+            <h1 style='text-align: center; padding-block: 20px'>{$product->__get('name')}</h1>
+            <section style='margin: 10px auto; width: fit-content'>
+                <img href='{$product->__get('img')}' style='width: 500px; height: 300px;'>
+                <p>{$product->__get('description')}</p>
+                <p>R$ {$product->__get('price')}</p>
+            </section>
+        ";
+        echo $pageInfo;
+    } else include_once("error.php");
 ?>

@@ -6,11 +6,11 @@
     <?php
         foreach ($products as $p => $info) {
             echo "
-                <a href='doces/info?product=$p' class='product'>
-                    <img src='{$info->img}'>
+                <a href='doces/info?p=$p' class='product'>
+                    <img src='{$info->__get('img')}'>
                     <div class='info'>
-                        <h2 class='product-title'>{$info->name}</h2>
-                        <p class='product-description'>{$info->description}</p>
+                        <h2 class='product-title'>{$info->__get('name')}</h2>
+                        <p class='product-description'>{$info->__get('description')}</p>
                     </div>
                 </a>
             ";

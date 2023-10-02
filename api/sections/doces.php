@@ -1,18 +1,5 @@
 <?php 
-    class Product {
-        public string $name;
-        public float $price;
-        public string $img;
-        public string $description;
-        public function __construct(string $name, float $price, string $img, string $description) {
-            $this->name = $name;
-            $this->price = $price;
-            $this->img = $img;
-            $this->description = $description;
-        }
-    };
-
-    global $products;
+    require_once "Product.php";
 
     $products = [
         'brigadeiro' => new Product(
@@ -30,7 +17,7 @@
         'bolo-de-pote' => new Product(
             'Bolo de pote',
             10.20,
-            'img/bolodepote.png',
+            'img/bolo-de-pote.png',
             'O melhor bolo de pote artesanal.'
         ),
     ];
