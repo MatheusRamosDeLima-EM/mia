@@ -126,6 +126,16 @@
         main {
             margin-top: 64px;
         }
+
+        main h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+        }
     </style>
     <title>MIA - Loja de doces</title>
 </head>

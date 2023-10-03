@@ -14,7 +14,7 @@
     if (verifyGetP($products, $_GET['p'])) {
         $product = getProductAttributes($products);
         $pageInfo = "
-            <h1 style='text-align: center; padding-block: 20px'>{$product->__get('name')}</h1>
+            <h1>{$product->__get('name')}</h1>
             <section style='margin: 10px auto; width: fit-content'>
                 <img href='{$product->__get('img')}' style='width: 500px; height: 300px;'>
                 <p>{$product->__get('description')}</p>
