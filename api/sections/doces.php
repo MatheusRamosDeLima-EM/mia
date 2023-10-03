@@ -1,5 +1,5 @@
 <?php 
-    require_once "api/Product.php";
+    require_once ('../'.__DIR__).'/Product.php';
 
     $products = [
         'brigadeiro' => new Product(
