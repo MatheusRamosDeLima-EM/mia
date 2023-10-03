@@ -14,7 +14,7 @@
         public function __get($attr) {
             return $attr? $this->$attr : '';
         }
-        public function __set($attr, $value) {
+        private function __set($attr, $value) {
             $this->$attr = $value;
         }
     };
