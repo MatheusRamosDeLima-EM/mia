@@ -4,17 +4,20 @@
         private float $price;
         private string $img;
         private string $description;
+
         public function __construct(string $name, float $price, string $img, string $description) {
             // $this->attr = $attr;
-            $this->setAttr('name', $name);
-            $this->setAttr('price', $price);
-            $this->setAttr('img', $img);
-            $this->setAttr('description', $description);
+            $this->__set('name', $name);
+            $this->__set('price', $price);
+            $this->__set('img', $img);
+            $this->__set('description', $description);
         }
+
         public function __get($attr) {
             return $attr? $this->$attr : '';
         }
-        private function setAttr($attr, $value) {
+        
+        public function __set($attr, $value) {
             $this->$attr = $value;
         }
     };
