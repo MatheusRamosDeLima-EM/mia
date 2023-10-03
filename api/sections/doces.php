@@ -1,5 +1,5 @@
 <?php 
-    require_once "/Product.php";
+    require_once "api/Product.php";
 
     $products = [
         'brigadeiro' => new Product(
