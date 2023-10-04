@@ -124,7 +124,7 @@
 
         /* Main */
         main {
-            margin-top: 64px;
+            margin-block: 64px;
         }
 
         main h1 {
@@ -135,6 +135,10 @@
         /* Footer */
         footer {
             text-align: center;
+            background-color: #f0f0f0;
+            box-shadow: 3px 0 3px 3px rgba(0, 0, 0, 0.363);
+            width: 100%;
+            height: 64px;
         }
     </style>
     <title>MIA - Loja de doces</title>
