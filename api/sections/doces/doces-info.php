@@ -1,4 +1,8 @@
 <?php
+    $dir_atual = dirname(__FILE__);
+    $arquivo_products = realpath($dir_atual . '/../../products.php');
+    include_once($arquivo_products);
+
     function verifyGetP(array $products, string $productId) {
         foreach ($products as $productsId => $productsAttr) {
             if ($productsId === $productId) return true;
