@@ -41,7 +41,7 @@
     function selectDocesPage($url) {
         $url = trim($url, '/');
         if ($url ==='doces') return 'doces-main';
-        else if (strpos($url, 'doces/info') === 0) return 'doces-info';
+        else if (strpos($url, 'doces/info?p=') === 0) return 'doces-info';
         else return null;
     }
 
