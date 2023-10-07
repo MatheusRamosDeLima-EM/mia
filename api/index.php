@@ -1,5 +1,5 @@
 <?php
-    $pages = ['home', 'doces', 'sobre', 'contato', 'error'];
+    $pages = ['home', 'doces', 'sobre', 'contato'];
 ?>
 
 <?php
@@ -154,7 +154,6 @@
                         $link = $linkName;
                         $linkName = ucfirst($linkName);
                         if ($link == 'home') echo "<li><a href='/'>$linkName</a></li>";
-                        else if ($link == 'error') echo "";
                         else echo "<li><a href='/$link'>$linkName</a></li>";
                     }
                 ?>

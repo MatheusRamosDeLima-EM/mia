@@ -6,7 +6,7 @@
     <?php
         foreach ($products as $p => $info) {
             echo "
-                <a href='doces/info?p=$p' class='product'>
+                <a href='/doces/info?p=$p' class='product'>
                     <div style='background-image: url({$info->__get('img')});' class='img'></div>
                     <div class='info'>
                         <h2 class='product-title'>{$info->__get('name')}</h2>
