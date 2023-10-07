@@ -124,7 +124,8 @@
 
         /* Main */
         main {
-            margin-block: 64px;
+            margin-top: 64px;
+            min-height: calc(100vh - 2 * 64px);
         }
 
         main h1 {

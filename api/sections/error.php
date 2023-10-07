@@ -13,8 +13,7 @@
 <style>
     main {
         min-height: calc(100vh - 2 * 64px);
-        margin: 64px auto;
-        margin-bottom: 0;
+        margin-inline: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
