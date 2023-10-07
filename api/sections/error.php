@@ -1,2 +1,2 @@
-<h1>Erro 404</h1>
-<p>Sai daqui vacilão</p>
+<h1>Algo deu errado!</h1>
+<p>Provavelmente a página que você está querendo acessar não existe. Caso isso seja algum erro, e queira nos reportar sobre isso, nos <a href="contato.php">envie um e-mail</a>.</p>
