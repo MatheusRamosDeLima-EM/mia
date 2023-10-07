@@ -22,5 +22,5 @@
             </section>
         ";
         echo $pageInfo;
-    } else include_once('sections/error.php');
+    } else include_once('api/sections/error.php');
 ?>
