@@ -36,16 +36,16 @@
 ?>
 
 <?php 
-    $url = $_SERVER["REQUEST_URI"];
+    $uri = $_SERVER['REQUEST_URI'];
 
-    function selectDocesPage($url) {
-        $url = trim($url, '/');
-        if ($url ==='doces') return 'doces-main';
-        else if (strpos($url, 'doces/info?p=') === 0) return 'doces-info';
+    function selectDocesPage(string $uri) {
+        $uri = trim($uri, '/');
+        if ($uri ==='doces') return 'doces-main';
+        else if (strpos($uri, 'doces/info?p=') === 0) return 'doces-info';
         else return null;
     }
 
-    $pageDoces = selectDocesPage($url);
+    $pageDoces = selectDocesPage($uri);
     
     if (!$pageDoces) include_once('error.php');
     else include_once("doces/$pageDoces.php");

@@ -1,12 +1,12 @@
 <?php
-    function verifyGetP($products, $productId) {
+    function verifyGetP(array $products, string $productId) {
         foreach ($products as $productsId => $productsAttr) {
             if ($productsId === $productId) return true;
         }
         return false;
     }
 
-    function getProductAttributes($products) {
+    function getProductAttributes(array $products) {
         $productId = $_GET['p'];
         return $products[$productId];
     }

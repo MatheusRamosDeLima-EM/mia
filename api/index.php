@@ -3,21 +3,21 @@
 ?>
 
 <?php
-    $url  = $_SERVER["REQUEST_URI"];
-    function selectPage($url, $pages) {
-        $url = trim($url, '/');
+    $uri = $_SERVER['REQUEST_URI'];
+    function selectPage(string $uri, array $pages) {
+        $uri = trim($uri, '/');
         
-        if ($url == '') return 'home';
-        else if (strpos($url, 'doces/') === 0) return 'doces';
+        if ($uri === '') return 'home';
+        else if (strpos($uri, 'doces/') === 0) return 'doces';
         else {
             foreach ($pages as $currentlyPage) {
-                if ($url == $currentlyPage) return $currentlyPage;
+                if ($uri === $currentlyPage) return $currentlyPage;
             }
             return 'error';
         }
     }
 
-    $page = selectPage($url, $pages);
+    $page = selectPage($uri, $pages);
 ?>
 
 <!DOCTYPE html>
