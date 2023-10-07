@@ -47,6 +47,6 @@
 
     $pageDoces = selectDocesPage($url);
     
-    if ($pageDoces === null) include_once("error.php");
+    if (!$pageDoces) include_once('error.php');
     else include_once("doces/$pageDoces.php");
 ?>
