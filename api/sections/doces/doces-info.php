@@ -25,11 +25,6 @@
     } else {
         $dir_atual = dirname(__FILE__);
         $arquivo_error = realpath($dir_atual . '/../error.php');
-
-        if (file_exists($arquivo_error)) {
-            include_once($arquivo_error);
-        } else {
-            echo "O arquivo 'error.php' não existe.";
-        }
+        include_once($arquivo_error);
     }
 ?>
