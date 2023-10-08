@@ -7,13 +7,13 @@
     function selectPage(string $uri, array $pages) {
         $uri = trim($uri, '/');
         
-        if ($uri === '') return 'home';
-        else if (strpos($uri, 'doces/') === 0) return 'doces';
+        if ($uri === '') return 'sections/home.php';
+        else if ($uri === 'doces' || strpos($uri, 'doces/') === 0) return 'doces.php';
         else {
             foreach ($pages as $currentlyPage) {
-                if ($uri === $currentlyPage) return $currentlyPage;
+                if ($uri === $currentlyPage) return "sections/$currentlyPage.php";
             }
-            return 'error';
+            return 'sections/error.php';
         }
     }
 
@@ -163,7 +163,7 @@
     </header>
     <main>
         <?php
-            include_once("sections/$page.php");
+            include_once $page;
         ?>
     </main>
     <footer>
