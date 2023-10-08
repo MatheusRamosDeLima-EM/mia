@@ -1,6 +1,14 @@
 <?php
     $uri = trim($_SERVER['REQUEST_URI'], '/');
 
+    echo "
+    <style>
+        header #doce {
+            background-color: green;
+            color: pink;
+        }
+    </style>";
+
     include_once 'products.php';
     
     if ($uri ==='doces') include_once 'pages/sections/doces/doces-main.php';

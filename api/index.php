@@ -94,8 +94,11 @@
         #menu-list a {
             padding: 30px 100px;
             text-decoration: none;
+            text-transform: uppercase;
             color: black;
             font-family: 'Roboto Condensed', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
         }
         
         @media only screen and (min-width: 550px) {
@@ -158,9 +161,9 @@
             <ul id="menu-list">
                 <?php 
                     foreach ($sections as $link) {
-                        $linkName = strtoupper($link);
-                        if ($link === 'home') echo "<li><a href='/'>$linkName</a></li>";
-                        else echo "<li><a href='/$link'>$linkName</a></li>";
+                        $linkName = ucfirst($link);
+                        if ($link === 'home') echo "<li><a href='/' id='home'>$linkName</a></li>";
+                        else echo "<li><a href='/$link' id='$link'>$linkName</a></li>";
                     }
                 ?>
             </ul>
