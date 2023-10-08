@@ -1,34 +1,18 @@
 <?php
-    $dir_atual = dirname(__FILE__);
-    $arquivo_products = realpath($dir_atual . '/../../products.php');
-    include_once($arquivo_products);
-
-    function verifyGetP(array $products, string $productId) {
-        foreach ($products as $productsId => $productsAttr) {
-            if ($productsId === $productId) return true;
-        }
-        return false;
-    }
+    $file_products = realpath($dir_atual . '/../../products.php');
+    include_once $file_products;
 
     function getProductAttributes(array $products) {
         $productId = $_GET['p'];
         return $products[$productId];
     }
 
-    if (verifyGetP($products, $_GET['p'])) {
-        $product = getProductAttributes($products);
-        $pageInfo = "
-            <h1>{$product->__get('name')}</h1>
-            <section style='margin: 10px auto; width: fit-content'>
-                <img href='{$product->__get('img')}' style='width: 500px; height: 300px;'>
-                <p>{$product->__get('description')}</p>
-                <p>R$ {$product->__get('price')}</p>
-            </section>
-        ";
-        echo $pageInfo;
-    } else {
-        $dir_atual = dirname(__FILE__);
-        $arquivo_error = realpath($dir_atual . '/../error.php');
-        include_once($arquivo_error);
-    }
+    $product = getProductAttributes($products);
 ?>
+
+<h1><?php echo $product->__get('name') ?></h1>
+<section style='margin: 10px auto; width: fit-content'>
+    <img href='<?php echo $product->__get('img') ?>' style='width: 500px; height: 300px;'>
+    <p><?php echo $product->__get('description') ?></p>
+    <p>R$ <?php echo $product->__get('price') ?></p>
+</section>

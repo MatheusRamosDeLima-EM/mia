@@ -1,15 +1,18 @@
-<?php 
-    $uri = $_SERVER['REQUEST_URI'];
+<?php
+    $uri = trim($_SERVER['REQUEST_URI'], '/');
+    if ($uri ==='doces') include_once 'doces/doces-main.php';
+    else if (strpos($uri, 'doces/info?p=') === 0) {
+        $file_products = realpath($dir_atual . '/../products.php');
+        include_once $file_products;
 
-    function selectDocesPage(string $uri) {
-        $uri = trim($uri, '/');
-        if ($uri ==='doces') return 'doces-main';
-        else if (strpos($uri, 'doces/info?p=') === 0) return 'doces-info';
-        else return null;
-    }
+        function verifyGetP(array $products, string $productId) {
+            foreach ($products as $productsId => $productsAttr) {
+                if ($productsId === $productId) return true;
+            }
+            return false;
+        }
 
-    $pageDoces = selectDocesPage($uri);
-    
-    if (!$pageDoces) include_once('error.php');
-    else include_once("doces/$pageDoces.php");
+        if (verifyGetP($products, $_GET['p'])) include_once 'doces/doces-info.php';
+        else include_once 'error.php';
+    } else include_once 'error.php';
 ?>
