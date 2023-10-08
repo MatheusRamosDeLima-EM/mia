@@ -154,7 +154,7 @@
                     foreach ($pages as $linkName) {
                         $link = $linkName;
                         $linkName = ucfirst($linkName);
-                        if ($link == 'home') echo "<li><a href='/'>$linkName</a></li>";
+                        if ($link === 'home') echo "<li><a href='/'>$linkName</a></li>";
                         else echo "<li><a href='/$link'>$linkName</a></li>";
                     }
                 ?>
