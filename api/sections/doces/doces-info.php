@@ -1,7 +1,4 @@
 <?php
-    $file_products = realpath(dirname(__FILE__) . '/../../products.php');
-    include_once $file_products;
-
     function getProductAttributes(array $products) {
         $productId = $_GET['p'];
         return $products[$productId];

@@ -4,9 +4,6 @@
 </section>
 <section id="products">
     <?php
-        $file_products = realpath(dirname(__FILE__) . '/../../products.php');
-        include_once($file_products);
-
         foreach ($products as $p => $info) {
             echo "
                 <a href='/doces/info?p=$p' class='product'>
