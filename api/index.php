@@ -1,23 +1,25 @@
 <?php
-    $pages = ['home', 'doces', 'sobre', 'contato'];
+    $sections = ['home', 'doces', 'sobre', 'contato'];
 ?>
 
 <?php
     $uri = $_SERVER['REQUEST_URI'];
-    function selectPage(string $uri, array $pages) {
+    function selectPage(string $uri, array $sections) {
         $uri = trim($uri, '/');
         
-        if ($uri === '') return 'sections/home.php';
-        else if ($uri === 'doces' || strpos($uri, 'doces/') === 0) return 'doces.php';
+        if ($uri === 'doces' || strpos($uri, 'doces/') === 0) return 'doces.php';
         else {
-            foreach ($pages as $currentlyPage) {
-                if ($uri === $currentlyPage) return "sections/$currentlyPage.php";
+            if ($uri === '') return 'pages/sections/home.php';
+            else {
+                foreach ($sections as $currentlyPage) {
+                    if ($uri === $currentlyPage) return "pages/sections/$currentlyPage.php";
+                }
+                return 'pages/error.php';
             }
-            return 'sections/error.php';
         }
     }
 
-    $page = selectPage($uri, $pages);
+    $page = selectPage($uri, $sections);
 ?>
 
 <!DOCTYPE html>
@@ -151,9 +153,8 @@
             <div id="menu-button">PHP</div>
             <ul id="menu-list">
                 <?php 
-                    foreach ($pages as $linkName) {
-                        $link = $linkName;
-                        $linkName = ucfirst($linkName);
+                    foreach ($sections as $link) {
+                        $linkName = strtoupper($link);
                         if ($link === 'home') echo "<li><a href='/'>$linkName</a></li>";
                         else echo "<li><a href='/$link'>$linkName</a></li>";
                     }

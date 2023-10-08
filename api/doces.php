@@ -3,16 +3,14 @@
 
     include_once 'products.php';
     
-    if ($uri ==='doces') include_once 'sections/doces/doces-main.php';
-    else if (strpos($uri, 'doces/info?p=') === 0) {
-        function verifyGetP(array $products, string $productId) {
-            foreach ($products as $productsId => $productsAttr) {
-                if ($productsId === $productId) return true;
-            }
-            return false;
-        }
+    if ($uri ==='doces') include_once 'pages/sections/doces/doces-main.php';
+    else if (strpos($uri, 'doces/info?p=') === 0 && verifyGetP($products, $_GET['p'])) include_once 'pages/sections/doces/doces-info.php';
+    else include_once 'pages/error.php';
 
-        if (verifyGetP($products, $_GET['p'])) include_once 'sections/doces/doces-info.php';
-        else include_once 'sections/error.php';
-    } else include_once 'sections/error.php';
+    function verifyGetP(array $products, string $productId) {
+        foreach ($products as $productsId => $productsAttr) {
+            if ($productsId === $productId) return true;
+        }
+        return false;
+    }
 ?>
