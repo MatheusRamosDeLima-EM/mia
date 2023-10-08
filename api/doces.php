@@ -1,9 +1,10 @@
 <?php
     $uri = trim($_SERVER['REQUEST_URI'], '/');
+
+    include_once 'products.php';
+    
     if ($uri ==='doces') include_once 'sections/doces/doces-main.php';
     else if (strpos($uri, 'doces/info?p=') === 0) {
-        include_once 'products.php';
-
         function verifyGetP(array $products, string $productId) {
             foreach ($products as $productsId => $productsAttr) {
                 if ($productsId === $productId) return true;
