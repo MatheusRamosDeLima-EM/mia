@@ -35,6 +35,9 @@
             box-sizing: border-box;
         }
 
+        /* Fonts import */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
         /* Header */
         header {
             display: flex;
@@ -92,6 +95,7 @@
             padding: 30px 100px;
             text-decoration: none;
             color: black;
+            font-family: 'Roboto Condensed', sans-serif;
         }
         
         @media only screen and (min-width: 550px) {
