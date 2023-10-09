@@ -38,6 +38,19 @@
         /* Fonts import */
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
+        /* Root */
+        :root {
+            /* Measures */
+            --header-height: 60px;
+            --footer-height: 45px;
+
+            /* Colors */
+            --background-color: white;
+            --gray-color: #f0f0f0;
+            --pink-color: #d16074;
+            --yellow-color: #ffff97;
+        }
+
         /* Header */
         header {
             display: flex;
@@ -47,10 +60,10 @@
             position: fixed;
             top: 0;
 
-            background-color: #f0f0f0;
+            background-color: var(--background-color);
             box-shadow: 3px 0 3px 3px rgba(0, 0, 0, 0.363);
             width: 100%;
-            height: 64px;
+            height: var(--header-height);
         }
 
         header h1 {
@@ -79,10 +92,10 @@
             gap: 0;
             position: absolute;
             left: 0;
-            top: 64px;
+            top: var(--header-height);
             width: 60vw;
-            height: calc(100vh - 64px);
-            background-color: #f0f0f0;
+            height: calc(100vh - var(--header-height));
+            background-color: var(--background-color);
             box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.363);
             z-index: 1;
         }
@@ -101,40 +114,10 @@
             font-weight: 700;
         }
         
-        @media only screen and (min-width: 550px) {
-            header {
-                flex-direction: row;
-                justify-content: space-around;
-            }
-
-            header h1 {
-                margin: 0;
-            }
-
-            #menu-button {
-                display: none;
-            }
-
-            #menu-list {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                gap: 25px;
-                position: static;
-                width: fit-content;
-                height: fit-content;
-                box-shadow: 0 0 0 0;
-            }
-
-            #menu-list a {
-                padding: 10px;
-            }
-        }
-
         /* Main */
         main {
-            margin-top: 64px;
-            min-height: calc(100vh - 2 * 64px);
+            margin-top: var(--header-height);
+            min-height: calc(100vh - var(--header-height) - var(--footer-height));
         }
 
         main h1 {
@@ -148,7 +131,47 @@
             background-color: #f0f0f0;
             box-shadow: 3px 0 3px 3px rgba(0, 0, 0, 0.363);
             width: 100%;
-            height: 64px;
+            height: var(--footer-height);
+        }
+
+        @media only screen and (min-width: 550px) {
+            :root {
+                --header-height: 120px;
+            }
+
+            header {
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+                padding-inline: 16px;
+            }
+
+            header h1 {
+                margin: 0;
+            }
+
+            header nav {
+                border-top: 1px solid #f0f0f0;
+            }
+
+            #menu-button {
+                display: none;
+            }
+
+            #menu-list {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                position: static;
+                width: fit-content;
+                height: 45px;
+                box-shadow: 0 0 0 0;
+            }
+
+            #menu-list a {
+                padding: 10px 50px;
+            }
         }
     </style>
     <title>MIA - Loja de doces</title>

@@ -19,6 +19,11 @@
 </section>
 
 <style>
+    header #doces {
+        background-color: #f0f0f0;
+        color: #d16074;
+    }
+
     :root {
         --product-width: 325px;
         --product-height: 275px;
