@@ -62,6 +62,7 @@
 
             background-color: var(--background-color);
             box-shadow: 3px 0 3px 3px rgba(0, 0, 0, 0.363);
+            padding-inline: 8px;
             width: 100%;
             height: var(--header-height);
         }
