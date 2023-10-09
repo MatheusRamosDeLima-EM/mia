@@ -135,7 +135,7 @@
             height: var(--footer-height);
         }
 
-        @media only screen and (min-width: 750px) {
+        @media only screen and (min-width: 700px) {
             :root {
                 --header-height: 120px;
             }
