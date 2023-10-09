@@ -89,7 +89,7 @@
             display: none;
             flex-direction: column;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: center;
             gap: 0;
             position: absolute;
             left: 0;
@@ -105,14 +105,22 @@
             display: flex;
         }
 
+        #menu-list li {
+            width: 100%;
+        }
+
         #menu-list a {
-            padding: 30px 100px;
             text-decoration: none;
             text-transform: uppercase;
             color: black;
             font-family: 'Roboto Condensed', sans-serif;
             font-size: 14px;
             font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc((100vh - var(--header-height)) / 4);
         }
 
         @media only screen and (min-width: 650px) {
@@ -152,6 +160,7 @@
 
             #menu-list a {
                 padding: 10px 50px;
+                height: fit-content;
             }
         }
         
