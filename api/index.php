@@ -114,28 +114,8 @@
             font-size: 14px;
             font-weight: 700;
         }
-        
-        /* Main */
-        main {
-            margin-top: var(--header-height);
-            min-height: calc(100vh - var(--header-height) - var(--footer-height));
-        }
 
-        main h1 {
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            background-color: #f0f0f0;
-            box-shadow: 3px 0 3px 3px rgba(0, 0, 0, 0.363);
-            width: 100%;
-            height: var(--footer-height);
-        }
-
-        @media only screen and (min-width: 675px) {
+        @media only screen and (min-width: 650px) {
             :root {
                 --header-height: 120px;
             }
@@ -173,6 +153,31 @@
             #menu-list a {
                 padding: 10px 50px;
             }
+        }
+        
+        /* Main */
+        main {
+            margin-top: var(--header-height);
+            min-height: calc(100vh - var(--header-height) - var(--footer-height));
+        }
+
+        main h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Footer */
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--background-color);
+            box-shadow: 3px 0 3px 3px rgba(0, 0, 0, 0.363);
+            width: 100%;
+            height: var(--footer-height);
         }
     </style>
     <title>MIA - Loja de doces</title>
