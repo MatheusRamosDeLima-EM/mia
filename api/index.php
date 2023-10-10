@@ -10,8 +10,8 @@
         if (strpos($uri, 'doces') === 0) {
             include_once 'products.php';
 
-            if ($uri === 'doces') return 'page/sections/doces/main.php';
-            else if (strpos($uri, 'doces/') === 0 && verifyUriWithProducts($products, $uri)) return 'page/sections/doces/info.php';
+            if ($uri === 'doces') return 'pages/sections/doces/main.php';
+            else if (strpos($uri, 'doces/') === 0 && verifyUriWithProducts($products, $uri)) return 'pages/sections/doces/info.php';
             else return 'pages/error.php';
         }
         else {
