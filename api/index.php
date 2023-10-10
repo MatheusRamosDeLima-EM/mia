@@ -7,16 +7,29 @@
     function selectPage(string $uri, array $sections) {
         $uri = trim($uri, '/');
         
-        if ($uri === 'doces' || strpos($uri, 'doces/') === 0) return 'doces.php';
+        if (strpos($uri, 'doces') === 0) {
+            include_once 'products.php';
+
+            if ($uri === 'doces') return 'page/sections/doces/main.php';
+            else if (strpos($uri, 'doces/') === 0 && verifyUriWithProducts($products, $uri)) return 'page/sections/doces/info.php';
+            else return 'pages/error.php';
+        }
         else {
             if ($uri === '') return 'pages/sections/home.php';
             else {
-                foreach ($sections as $currentlyPage) {
-                    if ($uri === $currentlyPage) return "pages/sections/$currentlyPage.php";
+                foreach ($sections as $section) {
+                    if ($uri === $section) return "pages/sections/$section.php";
                 }
                 return 'pages/error.php';
             }
         }
+    }
+
+    function verifyUriWithProducts(array $products, string $uri) {
+        foreach ($products as $product => $product_info) {
+            if ($uri === "doces/$product") return true;
+        }
+        return false;
     }
 
     $page = selectPage($uri, $sections);

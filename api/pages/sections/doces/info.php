@@ -1,10 +1,13 @@
 <?php
-    function getProductAttributes(array $products) {
-        $productId = $_GET['p'];
-        return $products[$productId];
+    function getProduct(array $products, string $uri) {
+        $uri = trim($uri, '/');
+        foreach ($products as $product => $product_info) {
+            if ($uri === "doces/$product") return $product_info;
+        }
+        return [];
     }
 
-    $product = getProductAttributes($products);
+    $product = getProduct($products, $uri);
 ?>
 
 <h1 id="product-title"><?php echo $product->__get('name') ?></h1>
