@@ -7,13 +7,7 @@
     function selectPage(string $uri, array $sections) {
         $uri = trim($uri, '/');
         
-        if (strpos($uri, 'doces') === 0) {
-            include_once 'products.php';
-
-            if ($uri === 'doces') return 'pages/sections/doces/main.php';
-            else if (strpos($uri, 'doces/') === 0 && verifyUriWithProducts($products, $uri)) return 'pages/sections/doces/info.php';
-            else return 'pages/error.php';
-        }
+        if (strpos($uri, 'doces') === 0) return 'doces.php';
         else {
             if ($uri === '') return 'pages/sections/home.php';
             else {
@@ -23,13 +17,6 @@
                 return 'pages/error.php';
             }
         }
-    }
-
-    function verifyUriWithProducts(array $products, string $uri) {
-        foreach ($products as $product => $product_info) {
-            if ($uri === "doces/$product") return true;
-        }
-        return false;
     }
 
     $page = selectPage($uri, $sections);

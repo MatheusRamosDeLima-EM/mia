@@ -1,7 +1,4 @@
 <?php
-    $file_products = realpath(dirname(__FILE__).'../../products.php');
-    include_once $file_products;
-
     function getProduct(array $products, string $uri) {
         $uri = trim($uri, '/');
         foreach ($products as $product => $product_info) {
