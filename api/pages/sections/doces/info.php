@@ -1,14 +1,4 @@
-<?php
-    function getProduct(array $products, string $uri) {
-        $uri = trim($uri, '/');
-        foreach ($products as $product => $product_info) {
-            if ($uri === "doces/$product") return $product_info;
-        }
-        return [];
-    }
-
-    $product = getProduct($products, $uri);
-?>
+<?php $product = verifyUriWithProducts($products, $uri) ?>
 
 <h1 id="product-title"><?php echo $product->__get('name') ?></h1>
 <section id="product-info">

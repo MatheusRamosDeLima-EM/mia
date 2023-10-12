@@ -1,9 +1,9 @@
 <?php
     $sections = ['home', 'doces', 'sobre', 'contato'];
+    $uri = $_SERVER['REQUEST_URI'];
 ?>
 
 <?php
-    $uri = $_SERVER['REQUEST_URI'];
     function selectPage(string $uri, array $sections) {
         $uri = trim($uri, '/');
         

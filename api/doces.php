@@ -5,7 +5,7 @@
 
     function verifyUriWithProducts(array $products, string $uri) {
         foreach ($products as $product => $product_info) {
-            if ($uri === "doces/$product") return true;
+            if ($uri === "doces/$product") return $product_info;
         }
         return false;
     }
