@@ -1,13 +1,11 @@
 <?php
-    $uri = trim($_SERVER['REQUEST_URI'], '/');
-
     include_once 'products.php';
 
     function verifyUriWithProducts(array $products, string $uri) {
         foreach ($products as $product => $product_info) {
             if ($uri === "doces/$product") return $product_info;
         }
-        return false;
+        return null;
     }
     
     if ($uri === 'doces') include_once 'pages/sections/doces/main.php';

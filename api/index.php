@@ -1,12 +1,10 @@
 <?php
     $sections = ['home', 'doces', 'sobre', 'contato'];
-    $uri = $_SERVER['REQUEST_URI'];
+    $uri = trim($_SERVER['REQUEST_URI'], '/');
 ?>
 
 <?php
     function selectPage(string $uri, array $sections) {
-        $uri = trim($uri, '/');
-        
         if (strpos($uri, 'doces') === 0) return 'doces.php';
         else {
             if ($uri === '') return 'pages/sections/home.php';
