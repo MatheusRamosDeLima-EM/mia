@@ -166,7 +166,6 @@
         main {
             margin-top: var(--header-height);
             min-height: calc(100vh - var(--header-height) - var(--footer-height));
-            background-image: url(imgs/brigadeiro.jpg);
         }
 
         main h1 {
