@@ -3,7 +3,7 @@
 <h1 id="product-title"><?php echo $product->__get('name') ?></h1>
 <section id="product-info">
     <div id="product-info-main">
-        <img href='<?php echo $product->__get('img') ?>' id="product-img">
+        <img href='../../../imgs/<?php echo $product->__get('img') ?>' id="product-img">
         <p id="product-price">R$<?php echo $product->__get('price') ?></p>
     </div>
     <div id="product-info-more">

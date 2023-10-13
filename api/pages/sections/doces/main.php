@@ -7,7 +7,7 @@
         foreach ($products as $product => $product_info) {
             echo "
                 <a href='/doces/$product' class='product'>
-                    <div style='background-image: url({$product_info->__get('img')});' class='img'></div>
+                    <div style='background-image: url(../../../imgs/{$product_info->__get('img')});' class='img'></div>
                     <div class='info'>
                         <h2 class='product-title'>{$product_info->__get('name')}</h2>
                         <p class='product-description'>{$product_info->__get('description')}</p>
