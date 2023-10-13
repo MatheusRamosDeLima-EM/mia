@@ -10,9 +10,9 @@
             if ($uri === '') return 'pages/sections/home.php';
             else {
                 foreach ($sections as $section) {
-                    if ($uri === $section) return "pages/sections/$section.php";
+                    if ($uri === $section && $section !== 'home') return "pages/sections/$section.html";
                 }
-                return 'pages/error.php';
+                return 'pages/error.html';
             }
         }
     }
