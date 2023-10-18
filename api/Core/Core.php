@@ -34,9 +34,9 @@
                 $paramethers = [];
             }
 
+            require realpath(dirname(__FILE__)."/../Controllers/$controller.php");
+
             $pathController = realpath(dirname(__FILE__)."/../Controllers/$controller.php");
-            echo method_exists($controller, $method);
-            echo method_exists(new $controller, $method);
 
             if (!file_exists($pathController) || !method_exists($controller, $method)) {
                 $controller = 'errorController';
@@ -44,7 +44,6 @@
                 $paramethers = [];
             }
 
-            require realpath(dirname(__FILE__)."/../Controllers/$controller.php");
             $c = new $controller;
             call_user_func_array(array($c, $method), array($paramethers));
         }
