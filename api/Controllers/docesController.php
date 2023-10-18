@@ -8,20 +8,20 @@
             $this->loadTemplate('sections/doces/index', $products);
         }
         
-        public function info(string $uriProduct) {
+        public function info($param = []) {
             require $this->productsPath();
 
-            function verifyProductInURIAndProducts($products, $uriProduct) {
+            function verifyProductInURIAndProducts($products, $param) {
                 foreach ($products as $productId => $product) {
-                    if ($uriProduct[0] === $productId) return true;
+                    if ($param[0] === $productId) return true;
                 }
                 return false;
             }
 
-            if ($uriProduct === []) {
+            if ($param === []) {
                 $doces = new docesController;
                 call_user_func_array(array($doces, 'index'), []);
-            } else if (!verifyProductInURIAndProducts($products, $uriProduct)) {
+            } else if (!verifyProductInURIAndProducts($products, $param)) {
                 $error = new errorController;
                 call_user_func_array(array($error, 'index'), []);
             } else {
