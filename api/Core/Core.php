@@ -34,7 +34,7 @@
                 $paramethers = [];
             }
 
-            $pathController = "mia/Controllers/$controller.php";
+            $pathController = "mia/api/Controllers/$controller.php";
 
             if (!file_exists($pathController) && !method_exists($controller, $method)) {
                 $controller = 'errorController';
