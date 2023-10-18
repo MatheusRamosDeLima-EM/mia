@@ -7,7 +7,7 @@
         $products = $this->data;
         foreach ($products as $productId => $product) {
             echo "
-                <a href='/index.php/doces/info/$productId' class='product'>
+                <a href='/doces/info/$productId' class='product'>
                     <div style='background-image: url(../../../imgs/{$product->__get('image')});' class='img'></div>
                     <div class='info'>
                         <h2 class='product-title'>{$product->__get('name')}</h2>

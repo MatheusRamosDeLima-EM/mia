@@ -6,7 +6,7 @@
 <h1 id="product-title"><?php echo $product->__get('name')?></h1>
 <section id="product-info">
     <div id="product-info-main">
-        <img src='../../../imgs/<?php echo $product->__get('image') ?>' id="product-img">
+        <img src='/<?php echo $product->__get('image') ?>' id="product-img">
         <p id="product-price">R$<?php echo $product->__get('price') ?></p>
     </div>
     <div id="product-info-more">

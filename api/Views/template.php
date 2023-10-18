@@ -177,8 +177,8 @@
                     $sections = ['home', 'doces', 'sobre', 'contato'];
                     foreach ($sections as $link) {
                         $linkName = ucfirst($link);
-                        if ($link === 'home') echo "<li><a href='/index.php' id='home'>$linkName</a></li>";
-                        else echo "<li><a href='/index.php/$link' id='$link'>$linkName</a></li>";
+                        if ($link === 'home') echo "<li><a href='/' id='home'>$linkName</a></li>";
+                        else echo "<li><a href='/$link' id='$link'>$linkName</a></li>";
                     }
                 ?>
             </ul>
