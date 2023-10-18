@@ -21,9 +21,7 @@
             if ($param === []) {
                 $this->loadTemplate('sections/doces/index', $products);
             } else if (!verifyProductInURIAndProducts($products, $param)) {
-                require_once "errorController.php";
-                $error = new errorController;
-                call_user_func_array(array($error, 'index'), []);
+                $this->loadTemplate('error');
             } else {
                 $this->loadTemplate('sections/doces/info', $products);
             }
