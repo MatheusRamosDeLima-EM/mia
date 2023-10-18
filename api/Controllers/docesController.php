@@ -19,9 +19,9 @@
             }
 
             if ($param === []) {
-                $doces = new docesController;
-                call_user_func_array(array($doces, 'index'), []);
+                $this->loadTemplate('sections/doces/index', $products);
             } else if (!verifyProductInURIAndProducts($products, $param)) {
+                require_once "errorController.php";
                 $error = new errorController;
                 call_user_func_array(array($error, 'index'), []);
             } else {
