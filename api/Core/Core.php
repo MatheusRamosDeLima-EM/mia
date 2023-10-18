@@ -42,7 +42,7 @@
                 $paramethers = [];
             }
 
-            require "../Controllers/$controller";
+            require realpath(dirname(__FILE__)."/../Controllers/$controller");
             $c = new $controller;
             call_user_func_array(array($c, $method), array($paramethers));
         }
