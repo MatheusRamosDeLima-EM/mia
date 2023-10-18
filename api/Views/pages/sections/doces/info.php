@@ -1,5 +1,6 @@
-<?php 
-    $productId = $this->data;
+<?php
+    $products = $this->data[0];
+    $productId = $this->data[1];
     $product = $products[$productId];
 ?>
 <h1 id="product-title"><?php echo $product->__get('name')?></h1>

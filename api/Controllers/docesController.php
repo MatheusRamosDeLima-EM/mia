@@ -21,12 +21,12 @@
             } else if (!verifyProductInURIAndProducts($products, $param)) {
                 $this->loadTemplate('error');
             } else {
-                $this->loadTemplate('sections/doces/info', $param);
+                $this->loadTemplate('sections/doces/info', [$products, $param]);
             }
         }
 
         private function productsPath() {
-            return (realpath(dirname(__FILE__))."/../Models/products.php");
+            return $_SERVER['DOCUMENT_ROOT'].'/api/Models/products.php';
         }
     }
 ?>
