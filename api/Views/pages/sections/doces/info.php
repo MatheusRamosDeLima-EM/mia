@@ -1,13 +1,11 @@
-<?php $product = verifyUriWithProducts($products, $uri) ?>
-
-<h1 id="product-title"><?php echo $product->__get('name') ?></h1>
+<h1 id="product-title"><?php ?></h1>
 <section id="product-info">
     <div id="product-info-main">
-        <img src='../../../imgs/<?php echo $product->__get('img') ?>' id="product-img">
-        <p id="product-price">R$<?php echo $product->__get('price') ?></p>
+        <img src='../../../imgs/<?php ?>' id="product-img">
+        <p id="product-price">R$<?php ?></p>
     </div>
     <div id="product-info-more">
-        <p id="product-description"><?php echo $product->__get('description') ?></p>
+        <p id="product-description"><?php ?></p>
     </div>
 </section>
 <style>

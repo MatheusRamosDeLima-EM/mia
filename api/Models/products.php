@@ -1,5 +1,4 @@
 <?php
-    include_once "Product.php";
     $products = [
         'brigadeiro' => new Product(
             'Brigadeiro', 5.30, 'brigadeiro.jpg', 'O doce mais famoso e querido do Brasil.'
