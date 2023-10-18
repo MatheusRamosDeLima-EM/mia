@@ -4,15 +4,18 @@
 </section>
 <section id="products">
     <?php
-        // $divProduct = "
-        //     <a href='/doces/' class='product'>
-        //         <div style='background-image: url(../../../imgs/{});' class='img'></div>
-        //         <div class='info'>
-        //             <h2 class='product-title'>{}</h2>
-        //             <p class='product-description'>{}</p>
-        //         </div>
-        //     </a>
-        // ";
+        $products = $this->data;
+        foreach ($products as $productId => $product) {
+            echo "
+                <a href='/index.php/doces/$productId' class='product'>
+                    <div style='background-image: url(../../../imgs/{$product->__get('image')});' class='img'></div>
+                    <div class='info'>
+                        <h2 class='product-title'>{$product->__get('name')}</h2>
+                        <p class='product-description'>{$product->__get('description')}</p>
+                    </div>
+                </a>
+            ";
+        }
     ?>
 </section>
 

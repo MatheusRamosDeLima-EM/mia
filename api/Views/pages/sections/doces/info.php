@@ -1,11 +1,15 @@
-<h1 id="product-title"><?php ?></h1>
+<?php 
+    $productId = $this->data;
+    $product = $products[$productId];
+?>
+<h1 id="product-title"><?php echo $product->__get('name')?></h1>
 <section id="product-info">
     <div id="product-info-main">
-        <img src='../../../imgs/<?php ?>' id="product-img">
-        <p id="product-price">R$<?php ?></p>
+        <img src='../../../imgs/<?php echo $product->__get('image') ?>' id="product-img">
+        <p id="product-price">R$<?php echo $product->__get('price') ?></p>
     </div>
     <div id="product-info-more">
-        <p id="product-description"><?php ?></p>
+        <p id="product-description"><?php echo $product->__get('description') ?></p>
     </div>
 </section>
 <style>
