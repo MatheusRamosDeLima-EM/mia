@@ -186,7 +186,7 @@
     </header>
     <main>
         <?php
-            $this->loadViewsOnTemplate($view_name, $model_data);
+            $this->loadViewOnTemplate($view_name, $model_data);
         ?>
     </main>
     <footer>
