@@ -35,6 +35,8 @@
             }
 
             $pathController = realpath(dirname(__FILE__)."/../Controllers/$controller.php");
+            echo method_exists($controller, $method);
+            echo method_exists(new $controller, $method);
 
             if (!file_exists($pathController) || !method_exists($controller, $method)) {
                 $controller = 'errorController';
