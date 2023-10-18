@@ -42,6 +42,7 @@
                 $paramethers = [];
             }
 
+            require "../Controllers/$controller";
             $c = new $controller;
             call_user_func_array(array($c, $method), array($paramethers));
         }
