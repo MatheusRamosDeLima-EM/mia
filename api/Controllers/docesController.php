@@ -1,6 +1,4 @@
 <?php
-    require realpath(dirname(__FILE__)."/../Core/Controller.php");
-
     class docesController extends Controller {
         public function index() {
             require $this->productsPath();

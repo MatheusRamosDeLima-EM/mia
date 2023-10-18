@@ -36,13 +36,11 @@
 
             $pathController = realpath(dirname(__FILE__)."/../Controllers/$controller.php");
 
-            if (!file_exists($pathController) && !method_exists($controller, $method)) {
+            if (!file_exists($pathController) || !method_exists($controller, $method)) {
                 $controller = 'errorController';
                 $method = 'index';
                 $paramethers = [];
             }
-
-            require realpath(dirname(__FILE__)."/../Controllers/$controller.php");
 
             $c = new $controller;
             call_user_func_array(array($c, $method), array($paramethers));
