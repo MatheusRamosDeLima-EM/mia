@@ -34,13 +34,13 @@
                 $paramethers = [];
             }
 
-            $pathController = "mia/api/Controllers/$controller.php";
+            // $pathController = "mia/api/Controllers/$controller.php";
 
-            if (!file_exists($pathController) && !method_exists($controller, $method)) {
-                $controller = 'errorController';
-                $method = 'index';
-                $paramethers = [];
-            }
+            // if (!file_exists($pathController) && !method_exists($controller, $method)) {
+            //     $controller = 'errorController';
+            //     $method = 'index';
+            //     $paramethers = [];
+            // }
 
             require realpath(dirname(__FILE__)."/../Controllers/$controller.php");
             $c = new $controller;
