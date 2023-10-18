@@ -21,7 +21,7 @@
             } else if (!verifyProductInURIAndProducts($products, $param)) {
                 $this->loadTemplate('error');
             } else {
-                $this->loadTemplate('sections/doces/info', [$products, $param]);
+                $this->loadTemplate('sections/doces/info', [$products, $param[0]]);
             }
         }
 
