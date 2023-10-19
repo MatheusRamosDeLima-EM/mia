@@ -1,19 +1,19 @@
 {
-    "functions": {
-      "api/*.php": { "runtime": "vercel-php@0.6.0" }
+  "functions": {
+    "api/*.php": { "runtime": "vercel-php@0.6.0" }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.php"
     },
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/api/index.php"
-      },
-      {
-        "src": "/assets/(.*)",
-        "dest": "/public/assets/$1"
-      },
-      {
-        "src": "/midia/(.*)",
-        "dest": "/public/midia/$1"
-      }
-    ]
-  }
+    {
+      "src": "/public/assets/(.*)",
+      "dest": "/public/assets/$1"
+    },
+    {
+      "src": "/public/midia/(.*)",
+      "dest": "/public/midia/$1"
+    }
+  ]
+}
