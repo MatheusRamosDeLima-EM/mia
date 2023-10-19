@@ -4,15 +4,15 @@
   },
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/index.php/(.*)",
       "dest": "/api/index.php"
     },
     {
-      "src": "/public/assets/(.*)",
+      "src": "/assets/(.*)",
       "dest": "/public/assets/(.*)"
     },
     {
-      "src": "/public/midia/(.*)",
+      "src": "/midia/(.*)",
       "dest": "/public/midia/(.*)"
     }
   ]
