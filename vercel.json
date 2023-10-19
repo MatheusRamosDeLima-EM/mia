@@ -4,20 +4,16 @@
   },
   "routes": [
     {
-      "src": "/index.php",
-      "dest": "/api/index.php"
-    },
-    {
-      "src": "/index.php/(.*)",
-      "dest": "/api/index.php"
-    },
-    {
       "src": "/assets/(.*)",
       "dest": "/public/assets/(.*)"
     },
     {
       "src": "/midia/(.*)",
       "dest": "/public/midia/(.*)"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.php"
     }
   ]
 }
