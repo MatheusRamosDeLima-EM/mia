@@ -9,11 +9,11 @@
     },
     {
       "src": "/public/assets/(.*)",
-      "dest": "/public/assets/$1"
+      "dest": "/public/assets/(.*)"
     },
     {
       "src": "/public/midia/(.*)",
-      "dest": "/public/midia/$1"
+      "dest": "/public/midia/(.*)"
     }
   ]
 }
