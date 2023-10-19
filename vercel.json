@@ -1,17 +1,19 @@
 {
     "functions": {
-      "api/*.php": {
-        "runtime": "vercel-php@0.6.0"
-      }
+      "api/*.php": { "runtime": "vercel-php@0.6.0" }
     },
     "routes": [
       {
-        "src": "/(.*)", 
+        "src": "/(.*)",
         "dest": "/api/index.php"
       },
       {
+        "src": "/assets/(.*)",
+        "dest": "/public/assets/$1"
+      },
+      {
         "src": "/midia/(.*)",
-        "dest": "/assets/midia/$1"
+        "dest": "/public/midia/$1"
       }
     ]
   }
