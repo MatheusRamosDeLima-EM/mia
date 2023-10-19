@@ -10,8 +10,8 @@
         "dest": "/api/index.php"
       },
       {
-        "src": "/Midia",
-        "dest": "/api/Midia"
+        "src": "/midia",
+        "dest": "/assets/midia"
       }
     ]
   }
