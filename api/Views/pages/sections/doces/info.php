@@ -1,6 +1,6 @@
 <?php
-    $products = $this->__get('data')['products'];
-    $productId = $this->__get('data')['productId'];
+    $products = $this->getData()['products'];
+    $productId = $this->getData()['productId'];
     $product = $products[$productId];
 ?>
 <h1 id="product-title"><?php echo $product->__get('name')?></h1>

@@ -18,12 +18,16 @@
             require_once $_SERVER['DOCUMENT_ROOT']."/api/Views/pages/$view_name.php";
         }
         
-        public function __get(string $attribute) {
-            return $this->attribute;
+        public function getData() {
+            return $this->data;
         }
 
-        public function __set(string $attribute, string $value) {
-            $this->attribute = $value;
+        public function getStyle() {
+            return $this->style;
+        }
+
+        protected function setStyle(string $value) {
+            $this->style = $value;
         }
     }
 ?>

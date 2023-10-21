@@ -3,7 +3,7 @@
         public function index() {
             require $this->productsPath();
 
-            $this->__set('style', 'doces-index');
+            $this->setStyle('doces-index');
             $this->loadTemplate('sections/doces/index', $products);
         }
         
@@ -18,13 +18,13 @@
             }
 
             if ($param === []) {
-                $this->__set('style', 'doces-index');
+                $this->setStyle('doces-index');
                 $this->loadTemplate('sections/doces/index', $products);
             } else if (!verifyProductInURIAndProducts($products, $param)) {
-                $this->__set('style', 'error');
+                $this->setStyle('error');
                 $this->loadTemplate('error');
             } else {
-                $this->__set('style', 'doces-info');
+                $this->setStyle('doces-info');
                 $this->loadTemplate('sections/doces/info', ['products' => $products, 'productId' => $param[0]]);
             }
         }
