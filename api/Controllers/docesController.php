@@ -18,11 +18,13 @@
             }
 
             if ($param === []) {
-                $this->setStyle('doces-index');
-                $this->loadTemplate('sections/doces/index', $products);
+                // $this->setStyle('doces-index');
+                // $this->loadTemplate('sections/doces/index', $products);
+                call_user_func_array(array(new docesController, 'index'), []);
             } else if (!verifyProductInURIAndProducts($products, $param)) {
-                $this->setStyle('error');
-                $this->loadTemplate('error');
+                // $this->setStyle('error');
+                // $this->loadTemplate('error');
+                call_user_func_array(array(new errorController, 'index'), []);
             } else {
                 $this->setStyle('doces-info');
                 $this->loadTemplate('sections/doces/info', ['products' => $products, 'productId' => $param[0]]);
