@@ -1,7 +1,7 @@
 <?php 
     class errorController extends Controller {
         public function index() {
-            $this->defineStylesheet('error');
+            $this->__set('style', 'error');
             $this->loadTemplate('error');
         }
     }

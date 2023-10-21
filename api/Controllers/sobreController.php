@@ -1,7 +1,7 @@
 <?php 
     class sobreController extends Controller {
         public function index() {
-            $this->defineStylesheet('sobre');
+            $this->__set('style', 'sobre');
             $this->loadTemplate('sections/sobre');
         }
     }
