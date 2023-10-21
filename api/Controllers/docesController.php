@@ -7,27 +7,24 @@
             $this->loadTemplate('sections/doces/index', $products);
         }
         
-        public function info($param = []) {
+        public function info($data = []) {
             require $this->productsPath();
 
-            function verifyProductInURIAndProducts($products, $param) {
+            function verifyProductInURIAndProducts($products, $data) {
+                $productId = $data[0];
                 foreach ($products as $productId => $product) {
-                    if ($param[0] === $productId) return true;
+                    if ($productId === $productId) return true;
                 }
                 return false;
             }
 
-            if ($param === []) {
-                // $this->setStyle('doces-index');
-                // $this->loadTemplate('sections/doces/index', $products);
+            if ($data === []) {
                 call_user_func_array(array(new docesController, 'index'), []);
-            } else if (!verifyProductInURIAndProducts($products, $param)) {
-                // $this->setStyle('error');
-                // $this->loadTemplate('error');
+            } else if (!verifyProductInURIAndProducts($products, $data)) {
                 call_user_func_array(array(new errorController, 'index'), []);
             } else {
                 $this->setStyle('doces-info');
-                $this->loadTemplate('sections/doces/info', ['products' => $products, 'productId' => $param[0]]);
+                $this->loadTemplate('sections/doces/info', ['products' => $products, 'productId' => $productId]);
             }
         }
 
