@@ -45,36 +45,19 @@
         flex-direction: column;
         align-items: start;
         justify-content: center;
-        border: 1px solid black;
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.4);
+        border-radius: 15px;
         color: black;
         text-decoration: none;
     }
     
-    @media only screen and (min-width: 400px) {
-        #products {
-            gap: var(--product-gap);
-            width: var(--product-width);
-        }
-
-        .product {
-            width: var(--product-width);
-        }
-    }
-
-    @media only screen and (min-width: 850px) {
-        #products {
-            grid-template-columns: var(--product-width) var(--product-width);
-            width: calc(2 * var(--product-width) + var(--product-gap));
-        }
-    }
-
-
     .product .img {
         width: 100%;
         height: calc(var(--product-height) * 0.7);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 10px 10px 0px 0px;
     }
     
     .product .info {
@@ -100,5 +83,30 @@
 
     .product-description {
         font-size: 16px;
+    }
+
+    @media only screen and (min-device-width: 700px) {
+        .product:hover {
+            box-shadow: 2.5px 2.5px 15px 1px rgba(0, 0, 0, 0.6);
+            transition: 0.2s;
+        }
+    }
+
+    @media only screen and (min-width: 400px) {
+        #products {
+            gap: var(--product-gap);
+            width: var(--product-width);
+        }
+
+        .product {
+            width: var(--product-width);
+        }
+    }
+
+    @media only screen and (min-width: 850px) {
+        #products {
+            grid-template-columns: var(--product-width) var(--product-width);
+            width: calc(2 * var(--product-width) + var(--product-gap));
+        }
     }
 </style>
