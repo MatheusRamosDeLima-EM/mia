@@ -10,21 +10,21 @@
         public function info($data = []) {
             require $this->productsPath();
 
-            function verifyProductInURIAndProducts($products, $data) {
-                $productId = $data[0];
+            $productName = $data[0];
+            function verifyProductInURIAndProducts($products, $productName) {
                 foreach ($products as $productId => $product) {
-                    if ($productId === $productId) return true;
+                    if ($productName === $productId) return true;
                 }
                 return false;
             }
 
             if ($data === []) {
                 call_user_func_array(array(new docesController, 'index'), []);
-            } else if (!verifyProductInURIAndProducts($products, $data)) {
+            } else if (!verifyProductInURIAndProducts($products, $productName)) {
                 call_user_func_array(array(new errorController, 'index'), []);
             } else {
                 $this->setStyle('doces-info');
-                $this->loadTemplate('sections/doces/info', ['products' => $products, 'productId' => $productId]);
+                $this->loadTemplate('sections/doces/info', ['products' => $products, 'productId' => $productName]);
             }
         }
 
