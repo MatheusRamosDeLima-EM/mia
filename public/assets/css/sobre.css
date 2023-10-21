@@ -1,0 +1,8 @@
+header #sobre {
+    background-color: var(--gray-color);
+    color: var(--pink-color);
+}
+
+ul {
+    list-style-type: none;
+}

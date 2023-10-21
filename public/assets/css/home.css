@@ -1,0 +1,4 @@
+header #home {
+    background-color: var(--gray-color);
+    color: var(--pink-color);
+}

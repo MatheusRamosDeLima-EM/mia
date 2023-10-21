@@ -7,13 +7,3 @@
     <li><span>Visão:</span> Ser uma referência em doces artesanais de toda região metropolitana de Curitiba.</li>
     <li><span>Valores:</span> Atender a todo tipo de público e necessidade do cliente.</li>
 </ul>
-<style>
-    header #sobre {
-        background-color: var(--gray-color);
-        color: var(--pink-color);
-    }
-
-    ul {
-        list-style-type: none;
-    }
-</style>
