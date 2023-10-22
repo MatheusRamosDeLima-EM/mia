@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/hover.css">
     <link rel="stylesheet" href="/assets/css/pages/<?php echo $this->getStyle() ?>.css">
     <script src="/assets/js/index.js" defer></script>
     <title>MIA - Loja de doces</title>

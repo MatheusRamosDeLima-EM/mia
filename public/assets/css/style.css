@@ -141,6 +141,32 @@ header h1 {
     }
 }
 
+/* Pseudoclasses hover: */
+
+/* Mobile */
+@media only screen and (max-device-width: 850px) {
+    #menu-button:hover div {
+        background-color: black;
+        transition: 0;
+    }
+
+    #menu-list a:hover {
+        background-color: var(--background-color);
+    }
+}
+
+/* Desktop */
+@media only screen and (min-device-width: 851px) {
+    #menu-button:hover div {
+        background-color: #484848;
+        transition: 0.3s;
+    }
+
+    #menu-list a:hover {
+        background-color: var(--gray-color);
+    }
+}
+
 /* Main */
 main {
     margin-top: var(--header-height);
