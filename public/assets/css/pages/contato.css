@@ -1,8 +1,5 @@
-header #sobre, header #sobre:hover {
+header #contato, header #contato:hover {
     background-color: var(--pink-color);
     color: var(--background-color);
-}
-
-ul {
-    list-style-type: none;
+    cursor: default;
 }
