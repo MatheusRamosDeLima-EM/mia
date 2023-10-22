@@ -71,7 +71,7 @@ header #doces, header #doces:hover {
     }
 }
 
-@media only screen and (min-device-width: 851px) {
+@media only screen and (min-device-width: 1200px) {
     .product:hover {
         box-shadow: 2.5px 2.5px 15px 1px rgba(0, 0, 0, 0.6);
         transition: 0.2s;
