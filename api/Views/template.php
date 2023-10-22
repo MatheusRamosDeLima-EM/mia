@@ -12,7 +12,11 @@
     <header>
         <h1>MIA</h1>
         <nav>
-            <div id="menu-button">PHP</div>
+            <div id="menu-button">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul id="menu-list">
                 <?php
                     $sections = ['home', 'doces', 'sobre', 'contato'];
