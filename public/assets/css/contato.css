@@ -1,4 +1,4 @@
-header #contato {
-    background-color: var(--gray-color);
-    color: var(--pink-color);
+header #contato, header #contato:hover {
+    background-color: var(--pink-color);
+    color: var(--background-color);
 }

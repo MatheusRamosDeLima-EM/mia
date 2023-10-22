@@ -93,7 +93,8 @@ header h1 {
 #menu-list a {
     text-decoration: none;
     text-transform: uppercase;
-    color: black;
+    background-color: var(--background-color);
+    color: var(--pink-color);
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 14px;
     font-weight: 700;
@@ -102,6 +103,10 @@ header h1 {
     align-items: center;
     justify-content: center;
     height: calc((100vh - var(--header-height)) / 4);
+}
+
+#menu-list a:hover {
+    background-color: var(--gray-color);
 }
 
 @media only screen and (min-width: 650px) {

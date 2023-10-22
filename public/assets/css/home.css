@@ -1,4 +1,4 @@
-header #home {
-    background-color: var(--gray-color);
-    color: var(--pink-color);
+header #home, header #home:hover {
+    background-color: var(--pink-color);
+    color: var(--background-color);
 }

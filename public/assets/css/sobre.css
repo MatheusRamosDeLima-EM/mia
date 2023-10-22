@@ -1,6 +1,6 @@
-header #sobre {
-    background-color: var(--gray-color);
-    color: var(--pink-color);
+header #sobre, header #sobre:hover {
+    background-color: var(--pink-color);
+    color: var(--background-color);
 }
 
 ul {

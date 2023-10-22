@@ -1,6 +1,6 @@
-header #doces {
-    background-color: var(--gray-color);
-    color: var(--pink-color);
+header #doces, header #doces:hover {
+    background-color: var(--pink-color);
+    color: var(--background-color);
 }
 
 :root {
