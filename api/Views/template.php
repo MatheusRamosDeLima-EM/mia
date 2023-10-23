@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap'>;
-    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'>;
-    <link rel="stylesheet" href="/assets/css/pages/<?php echo $this->getStyle() ?>.css">
+    <link rel="stylesheet" href="/assets/css/style.css" async>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap' async>;
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap' async>;
+    <link rel="stylesheet" href="/assets/css/pages/<?php echo $this->getStyle() ?>.css" async>
     <script src="/assets/js/index.js" defer></script>
     <title>MIA - Loja de doces</title>
 </head>
