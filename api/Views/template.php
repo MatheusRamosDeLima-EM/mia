@@ -29,12 +29,12 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main onclick="leaveMenuMobile()">
         <?php
             $this->loadViewOnTemplate($view_name, $model_data);
         ?>
     </main>
-    <footer>
+    <footer onclick="leaveMenuMobile()">
         <p>&COPY; MatheusRamosDeLima 2023</p>
     </footer>
 </body>
