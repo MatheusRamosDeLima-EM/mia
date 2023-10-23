@@ -7,6 +7,7 @@
 
 /* Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 /* Root */
 :root {
@@ -161,6 +162,9 @@ main {
 main h1 {
     text-align: center;
     padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--pink-color);
+    font-size: 35px;
 }
 
 /* Footer */
