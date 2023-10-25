@@ -13,9 +13,21 @@
 }
 
 #product-info-image {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#product-image-container {
     width: 600px;
     height: 400px;
     background-color: var(--gray-color);
+}
+
+#product-info-image figcaption {
+    color: var(--gray-color);
 }
 
 #product-image {
