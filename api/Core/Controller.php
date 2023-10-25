@@ -1,6 +1,7 @@
 <?php 
     class Controller {
         private $data;
+        private string $title;
         private string $style;
 
         public function __construct() {
@@ -20,6 +21,14 @@
         
         public function getData() {
             return $this->data;
+        }
+
+        public function getTitle() {
+            return $this->title;
+        }
+
+        protected function setTitle(string $value) {
+            $this->title = $value;
         }
 
         public function getStyle() {

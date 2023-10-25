@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" async>
     <link rel="stylesheet" href="/assets/css/pages/<?php echo $this->getStyle() ?>.css" async>
     <script src="/assets/js/index.js" defer></script>
-    <title>MIA - Loja de doces</title>
+    <title><?php echo $this->getTitle() ?></title>
 </head>
 <body>
     <header>

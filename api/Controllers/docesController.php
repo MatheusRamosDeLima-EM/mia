@@ -3,6 +3,7 @@
         public function index() {
             require $this->productsPath();
 
+            $this->setTitle('Todos os doces - MIA');
             $this->setStyle('doces-index');
             $this->loadTemplate('sections/doces/index', $products);
         }
@@ -23,6 +24,7 @@
             } else if (!verifyProductInURIAndProducts($products, $productName)) {
                 call_user_func_array(array(new errorController, 'index'), []);
             } else {
+                $this->setTitle('Ver: '. $products[$productId]->__get('name') . ' - MIA');
                 $this->setStyle('doces-info');
                 $this->loadTemplate('sections/doces/info', ['products' => $products, 'productId' => $productName]);
             }
