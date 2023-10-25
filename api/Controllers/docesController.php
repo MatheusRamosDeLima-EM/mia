@@ -24,7 +24,7 @@
             } else if (!verifyProductInURIAndProducts($products, $productName)) {
                 call_user_func_array(array(new errorController, 'index'), []);
             } else {
-                $this->setTitle('Ver: '. $products[$productName]->__get('name') . ' - MIA');
+                $this->setTitle('Doce: '. $products[$productName]->__get('name') . ' - MIA');
                 $this->setStyle('doces-info');
                 $this->loadTemplate('sections/doces/info', ['products' => $products, 'productId' => $productName]);
             }
