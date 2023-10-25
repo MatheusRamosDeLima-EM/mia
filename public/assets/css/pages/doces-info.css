@@ -3,20 +3,16 @@
 }
 
 #product-info {
-    margin: 10px auto;
-    width: 95%;
-}
-
-#product-info-main {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
+    width: 95%;
     height: 400px;
+    margin: 20px auto;
 }
 
-#product-info-main-image {
+#product-info-image {
     width: 600px;
     height: 400px;
     background-color: var(--gray-color);
@@ -24,10 +20,11 @@
 
 #product-image {
     height: 100%;
+    display: flex;
     margin: auto;
 }
 
-#product-info-main-text {
+#product-info-text {
     width: 40%;
     height: 100%;
     display: flex;
