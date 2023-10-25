@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: space-around;
     width: 95%;
-    height: 400px;
+    height: fit-content;
     margin: 20px auto;
 }
 
@@ -27,7 +27,8 @@
 }
 
 #product-info-image figcaption {
-    color: var(--gray-color);
+    color: #505050;
+    font-size: 15px;
 }
 
 #product-image {
