@@ -11,8 +11,9 @@
         <figcaption>* Imagem meramente ilustrativa</figcaption>
     </picture>
     <div id="product-sect-text">
-        <h1 id="product-title"><?php echo $product->__get('name')?></h1>
-        <p id="product-description"><?php echo $product->__get('description') ?></p>
+        <h1 id="product-title"><?php echo $product->__get('name') ?></h1>
+        <p id="product-slogan"><?php echo $product->__get('slogan') ?></p>
+        <div id="product-information"><?php echo $product->__get('information') ?></div>
         <p id="product-price">R$ <?php echo number_format($product->__get('price'), 2, ',', '.') ?></p>
     </div>
 </section>

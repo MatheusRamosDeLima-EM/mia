@@ -11,7 +11,7 @@
                     <div style='background-image: url(/midia/images/products/{$product->__get('image')});' class='img'></div>
                     <div class='info'>
                         <h2 class='product-title'>{$product->__get('name')}</h2>
-                        <p class='product-description'>{$product->__get('description')}</p>
+                        <p class='product-description'>{$product->__get('slogan')}</p>
                     </div>
                 </a>
             ";

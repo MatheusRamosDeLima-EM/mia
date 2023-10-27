@@ -3,14 +3,16 @@
         private string $name;
         private float $price;
         private string $image;
-        private string $description;
+        private string $slogan;
+        private string $information;
 
-        public function __construct(string $name, float $price, string $image, string $description) {
+        public function __construct(string $name, float $price, string $image, string $slogan, string $information) {
             // $this->attribute = $attribute;
             $this->__set('name', $name);
             $this->__set('price', $price);
             $this->__set('image', $image);
-            $this->__set('description', $description);
+            $this->__set('slogan', $slogan);
+            $this->__set('information', $information);
         }
 
         public function __get($attribute) {
