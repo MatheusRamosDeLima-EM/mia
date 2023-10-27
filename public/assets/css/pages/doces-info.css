@@ -20,7 +20,7 @@
 }
 
 #product-image-cnt {
-    width: 90%;
+    width: 100%;
     max-width: 650px;
     height: 400px;
     background-color: var(--gray-color);
@@ -39,7 +39,7 @@
 #product-sect-image figcaption {
     color: #505050;
     font-size: 15px;
-    width: 90%;
+    width: 100%;
 }
 
 #product-sect-text {
