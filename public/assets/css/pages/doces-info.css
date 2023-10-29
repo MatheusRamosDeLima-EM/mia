@@ -89,9 +89,6 @@ main {
 @media only screen and (min-width: 450px) {
     #product {
         flex-direction: column;
-        width: 95%;
-        height: fit-content;
-        margin: auto;
     }
     
     #product-title {
@@ -117,6 +114,9 @@ main {
         flex-direction: row;
         justify-content: space-around;
         gap: 0;
+        width: 95%;
+        height: fit-content;
+        margin: auto;
     }
 
     #product-sect-image {
