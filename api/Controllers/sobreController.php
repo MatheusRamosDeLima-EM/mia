@@ -3,7 +3,7 @@
         public function index() {
             $this->setTitle('Sobre nós - MIA');
             $this->setStyle('sobre');
-            $this->loadTemplate('sections/sobre');
+            $this->loadTemplate('sobre');
         }
     }
 ?>

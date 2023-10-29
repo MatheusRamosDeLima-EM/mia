@@ -4,8 +4,8 @@
             require $this->productsPath();
 
             $this->setTitle('Todos os doces - MIA');
-            $this->setStyle('doces-index');
-            $this->loadTemplate('sections/doces/index', $products);
+            $this->setStyle('doces/index');
+            $this->loadTemplate('doces/index', $products);
         }
         
         public function info($data = []) {
@@ -25,8 +25,8 @@
                 call_user_func_array(array(new errorController, 'index'), []);
             } else {
                 $this->setTitle('Doce: '. $products[$productName]->__get('name') . ' - MIA');
-                $this->setStyle('doces-info');
-                $this->loadTemplate('sections/doces/info', ['products' => $products, 'productId' => $productName]);
+                $this->setStyle('doces/info');
+                $this->loadTemplate('doces/info', ['products' => $products, 'productId' => $productName]);
             }
         }
 

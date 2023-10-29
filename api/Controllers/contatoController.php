@@ -3,7 +3,7 @@
         public function index() {
             $this->setTitle('Nos contate - MIA');
             $this->setStyle('contato');
-            $this->loadTemplate('sections/contato');
+            $this->loadTemplate('contato');
         }
     }
 ?>
