@@ -4,42 +4,36 @@
             'Brigadeiro',
             5.30,
             'brigadeiro.jpg',
-            'O doce mais famoso e querido do Brasil.',
-            '
-            <p>Na sua compra, levará um kit de 4 brigadeiros pensando um total de 300g.</p>
-            <p>Brigadeiros bem feitos, preparados com carinho e entregues com todo cuidado.</p>
-            '
+            'O doce que é paixão nacional',
+            '<p>Doce tradicional brasileiro feito com chocolate, leite condensado e manteiga. É o preferido de muitos, com seu sabor doce e cremoso.</p>'
         ),
-        'beijinho' => new Product(
-            'Beijinho',
-            4,
-            'beijinho.png',
-            'Aquele gosto de coco beira mar.',
-            '
-            <p>Na sua compra, levará um kit de 4 beijinhos pensando um total de 300g.</p>
-            <p>Beijinhos bem feitos, preparados com carinho e entregues com todo cuidado.</p>
-            '
+        // 'beijinho' => new Product(
+        //     'Beijinho',
+        //     4,
+        //     'beijinho.png',
+        //     'O sabor do coco que você ama',
+        //     '<p>Doce feito com coco ralado, leite condensado e manteiga. É cremoso e delicioso, com seu sabor de coco.</p>'
+        // ),
+        'palha-italiana' => new Product(
+            'Palha italiana',
+            10,
+            'palha-italiana.jpg',
+            'O crocante que é irresistível',
+            '<p>Doce feito com biscoito, chocolate e leite condensado. É crocante e chocolatudo, com sabor irresistível.</p>'
         ),
         'bolo-de-pote' => new Product(
             'Bolo de pote',
             10.20,
-            'bolo-de-pote.png',
-            'O melhor bolo de pote artesanal.',
-            '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione voluptate eius numquam blanditiis vitae? Sunt, dolorem blanditiis! Vero, provident maxime. Exercitationem, dolorem atque autem dolor facere optio molestias quas suscipit!</p>'
+            'bolo-de-pote.jpg',
+            'A sobremesa perfeita para qualquer hora',
+            '<p>Bolo em um pote, individual e perfeito para levar para onde quiser. É uma ótima opção para sobremesa ou lanche, com sabor de bolo e cobertura.</p>'
         ),
         'cupcake' => new Product(
             'Cupcake',
             8.45,
-            'cupcake.png',
-            'Um dos melhores cupcakes da região',
-            '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione voluptate eius numquam blanditiis vitae? Sunt, dolorem blanditiis! Vero, provident maxime. Exercitationem, dolorem atque autem dolor facere optio molestias quas suscipit!</p>'
-        ),
-        'palha-italiana' => new Product(
-            'Palha italiana',
-            10,
-            'palha-italiana.png',
-            'Mais do que uma palha italiana, uma perfeição',
-            '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione voluptate eius numquam blanditiis vitae? Sunt, dolorem blanditiis! Vero, provident maxime. Exercitationem, dolorem atque autem dolor facere optio molestias quas suscipit!</p>'
-        ),
+            'cupcake.jpg',
+            'A delícia que vai deixar sua festa mais animada',
+            '<p>Bolo pequeno, em formato de xícara, com cobertura e enfeites. É uma opção divertida e gostosa para festas e eventos, com sabores variados.</p>'
+        )
     ];
 ?>
