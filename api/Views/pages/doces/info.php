@@ -16,7 +16,7 @@
         <h1 id="product-title"><?php echo $product->__get('name') ?></h1>
         <p id="product-slogan"><?php echo $product->__get('slogan') ?></p>
         <div id="product-information"><?php echo $product->__get('information') ?></div>
-        <table>
+        <table id="product-flavors-and-prices">
             <thead>
                 <tr>
                     <th>Sabor</th>
@@ -25,7 +25,7 @@
             </thead>
             <tbody>
                 <?php foreach ($product->__get('flavorsAndPrices') as $flavor => $price): ?>
-                    <tr id="product-flavors-and-prices">
+                    <tr>
                         <td class="product-flavor"><?php echo $flavor ?></td>
                         <td class="product-price">R$ <?php echo number_format($price, 2, ",", ".") ?></td>
                     </tr>

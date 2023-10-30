@@ -77,13 +77,19 @@ main {
     width: 100%;
 }
 
-#product-price {
-    font-size: 25px;
-    color: var(--pink-color);
-    background-color: var(--background-color);
-    border: 1px solid var(--pink-color);
-    padding: 10px;
-    width: fit-content;
+#product-flavors-and-prices {
+    width: 100%;
+    max-width: 600px;
+}
+
+#product-flavors-and-prices thead {
+    background-color: var(--pink-color);
+    font-size: 20px;
+}
+
+#product-flavors-and-prices tbody {
+    background-color: var(--gray-color);
+    font-size: 18px;
 }
 
 @media only screen and (min-width: 450px) {
@@ -102,10 +108,6 @@ main {
     #product-information {
         width: 100%;
         max-width: 500px;
-    }
-    
-    #product-price {
-        font-size: 30px;
     }
 }
 
