@@ -24,14 +24,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <?php foreach ($product->__get('flavorsAndPrices') as $flavor => $price): ?>
-                        <td id="product-flavors-and-prices">
-                            <div class="product-flavor"><?php echo $flavor ?><td>
-                            <div class="product-price">R$ <?php echo number_format($price, 2, ",", ".") ?></div>
-                        </td>
-                    <?php endforeach ?>
-                </tr>
+                <?php foreach ($product->__get('flavorsAndPrices') as $flavor => $price): ?>
+                    <tr id="product-flavors-and-prices">
+                        <td class="product-flavor"><?php echo $flavor ?></td>
+                        <td class="product-price">R$ <?php echo number_format($price, 2, ",", ".") ?></td>
+                    </tr>
+                <?php endforeach ?>
             </tbody>
         </table>
     </div>
