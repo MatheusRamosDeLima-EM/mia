@@ -1,5 +1,4 @@
-main {
-    min-height: calc(100vh - 2 * 64px);
+#error-msg {
     margin-inline: auto;
     display: flex;
     flex-direction: column;
@@ -51,7 +50,7 @@ main {
 }
 
 @media only screen and (min-width: 500px) {
-    main {
+    #error-msg {
         margin-inline: 10px;
         flex-direction: row;
         justify-content: space-between;
@@ -64,7 +63,7 @@ main {
 }
 
 @media only screen and (min-width: 700px) {
-    main {
+    #error-msg {
         margin-inline: 25px;
     }
 
