@@ -87,9 +87,17 @@ main {
     font-size: 20px;
 }
 
+#product-flavors-and-prices thead th {
+    padding: 2px;
+}
+
 #product-flavors-and-prices tbody {
     background-color: var(--gray-color);
     font-size: 18px;
+}
+
+#product-flavors-and-prices tbody td {
+    padding: 2px;
 }
 
 @media only screen and (min-width: 450px) {
