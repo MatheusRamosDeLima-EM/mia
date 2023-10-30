@@ -6,7 +6,7 @@
 <section id="product">
     <picture id="product-sect-image">
         <div id="product-image-cnt">
-            <img src="/midia/images/products/<?php echo $product->__get('image') ?>" id="product-image">
+            <img src="/midia/images/products/<?php echo $product->__get('image') ?>" alt="Imagem de <?php echo $product->__get('name') ?>" id="product-image">
         </div>
         <figcaption>* Imagem meramente ilustrativa</figcaption>
     </picture>
