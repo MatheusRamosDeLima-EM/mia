@@ -19,12 +19,12 @@
         <div id="product-flavors-and-prices">
             <div id="product-flavors">
                 <?php foreach ($product->__get('flavorsAndPrices') as $flavor => $price): ?>
-                    <label class="product-flavor" id="product-<?php echo $flavor ?>" for="product-<?php echo $flavor?>-price"><?php echo $flavor ?></label>
+                    <label class="product-flavor" id="product-<?php echo str_replace(' ', '-', $flavor) ?>" for="product-<?php echo str_replace(' ', '-', $flavor)?>-price"><?php echo $flavor ?></label>
                 <?php endforeach ?>
             </div>
             <div id="product-prices">
                 <?php foreach ($product->__get('flavorsAndPrices') as $flavor => $price): ?>
-                    <p class="product-price" id="product-<?php echo $flavor ?>-price"><?php echo $price?></p>
+                    <p class="product-price" id="product-<?php echo str_replace(' ', '-', $flavor) ?>-price"><?php echo $price?></p>
                 <?php endforeach ?>
             </div>
         </div>
