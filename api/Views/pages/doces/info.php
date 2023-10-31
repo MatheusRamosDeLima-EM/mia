@@ -19,7 +19,7 @@
         <div id="product-flavors-and-prices">
             <div id="product-flavors">
                 <?php foreach ($product->__get('flavorsAndPrices') as $flavor => $price): ?>
-                    <label class="product-flavor" id="product-<?php echo $flavor ?>" for="product-<?php echo $flavor?>-price">$flavor</label>
+                    <label class="product-flavor" id="product-<?php echo $flavor ?>" for="product-<?php echo $flavor?>-price"><?php echo $flavor ?></label>
                 <?php endforeach ?>
             </div>
             <div id="product-prices">
