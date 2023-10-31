@@ -3,6 +3,7 @@
         private $data;
         private string $title;
         private string $style;
+        private string $script;
 
         public function __construct() {
             $this->data = array();
@@ -37,6 +38,14 @@
 
         protected function setStyle(string $value) {
             $this->style = $value;
+        }
+        
+        public function getScript() {
+            return $this->script;
+        }
+
+        protected function setScript(string $value) {
+            $this->script = $value;
         }
     }
 ?>

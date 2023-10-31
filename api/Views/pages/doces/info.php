@@ -16,21 +16,17 @@
         <h1 id="product-title"><?php echo $product->__get('name') ?></h1>
         <p id="product-slogan"><?php echo $product->__get('slogan') ?></p>
         <div id="product-information"><?php echo $product->__get('information') ?></div>
-        <table id="product-flavors-and-prices">
-            <thead>
-                <tr>
-                    <th>Sabor</th>
-                    <th>Valor</th>
-                </tr>
-            </thead>
-            <tbody>
+        <div id="product-flavors-and-prices">
+            <div id="product-flavors">
                 <?php foreach ($product->__get('flavorsAndPrices') as $flavor => $price): ?>
-                    <tr>
-                        <td class="product-flavor"><?php echo $flavor ?></td>
-                        <td class="product-price">R$ <?php echo number_format($price, 2, ",", ".") ?></td>
-                    </tr>
+                    <label class="product-flavor" id="product-<?php echo $flavor ?>" for="product-<?php echo $flavor?>-price">$flavor</label>
                 <?php endforeach ?>
-            </tbody>
-        </table>
+            </div>
+            <div id="product-prices">
+                <?php foreach ($product->__get('flavorsAndPrices') as $flavor => $price): ?>
+                    <p class="product-price" id="product-<?php echo $flavor ?>-price"><?php echo $price?></p>
+                <?php endforeach ?>
+            </div>
+        </div>
     </div>
 </section>
