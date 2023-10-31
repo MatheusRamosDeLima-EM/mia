@@ -107,6 +107,7 @@ main {
 #product-flavors label.selected {
     background-color: var(--pink-color);
     color: var(--background-color);
+    cursor: default;
 }
 
 #product-prices {
@@ -117,7 +118,6 @@ main {
     width: fit-content;
     font-size: 22px;
     padding: 8px;
-    width: 100px;
     height: 50px;
     margin: auto;
     display: flex;
