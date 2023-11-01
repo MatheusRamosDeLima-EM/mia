@@ -24,7 +24,7 @@
             </div>
             <div id="product-prices">
                 <?php foreach ($product->__get('flavorsAndPrices') as $flavor => $price): ?>
-                    <p class="product-price" id="product-<?php echo str_replace(' ', '-', $flavor) ?>-price">R$ <?php echo number_format($price, 2, ',', '.')?></p>
+                    <p class="product-price" id="product-<?php echo str_replace(' ', '-', $flavor) ?>-price"><?php echo $price ?></p>
                 <?php endforeach ?>
             </div>
         </div>

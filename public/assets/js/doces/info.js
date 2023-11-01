@@ -16,6 +16,12 @@ productsFlavors.forEach(productFlavor => {
     })
 });
 
+productsPrices.forEach(productPrice => {
+    const numberPrice = Number(productPrice.innerHTML);
+    const brlPrice = numberPrice.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
+    productPrice.innerHTML = brlPrice;
+});
+
 function clearSelected() {
     productsFlavors.forEach(productFlavor => {
         if (productFlavor.classList.contains('selected')) productFlavor.classList.remove('selected');
