@@ -20,7 +20,7 @@
             'Bolo',
             'O bolo que lembra memórias de infância',
             ['Chocolate' => 5.5],
-            'bolo-de-pote.jpg',
+            'bolo.jpg',
             true,
             '<p>Bolo caseiro feito com ingredientes de qualidade e extremo cuidado com o sabor e textura. Fará você ter experiências surreais. Bolo saboroso e fofinho, ideal para aproveitar em diversos momentos e com companhia.</p>'
         )
