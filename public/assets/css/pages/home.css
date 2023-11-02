@@ -25,7 +25,7 @@ header #home, header #home:hover {
 }
 
 #apresentation-txt h1 {
-    font-size: 45px;
+    font-size: 40px;
     padding: 15px;
     width: fit-content;
 }
@@ -57,6 +57,12 @@ header #home, header #home:hover {
     background-position: center;
     background-repeat: no-repeat;
     margin: 20px 15px;
+}
+
+@media only screen and (min-width: 610px) {
+    #apresentation-txt h1 {
+        font-size: 45px;
+    }
 }
 
 @media only screen and (min-width: 1028px) {
