@@ -6,7 +6,7 @@ header #home, header #home:hover {
 
 #apresentation {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: fit-content;
@@ -15,16 +15,16 @@ header #home, header #home:hover {
 #apresentation-txt {
     background-color: var(--background-color);
     min-height: 425px;
-    width: 50%;
-    padding: 20px 30px;
+    width: 100%;
+    margin: 20px 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 40px;
+    gap: 20px;
 }
 
 #apresentation-txt h1 {
-    font-size: 50px;
+    font-size: 45px;
     padding: 15px;
     width: fit-content;
 }
@@ -48,10 +48,29 @@ header #home, header #home:hover {
 }
 
 #apresentation-img {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    min-height: 425px;
     background-image: url("/midia/images/backgrounds/apresentation.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin: 20px 15px;
+}
+
+@media only screen and (min-width: 1028px) {
+    #apresentation {
+        flex-direction: row;
+    }
+
+    #apresentation-txt, #apresentation-img {
+        width: 50%;
+    }
+
+    #apresentation-txt {
+        margin: 20px 30px;
+    }
+
+    #apresentation-img {
+        margin: 20px 15px;
+    }
 }
