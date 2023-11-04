@@ -15,7 +15,10 @@
     <div id="product-sect-text">
         <h1 id="product-title"><?php echo $product->__get('name') ?></h1>
         <p id="product-slogan"><?php echo $product->__get('slogan') ?></p>
-        <div id="product-information"><?php echo $product->__get('information') ?></div>
+        <div id="product-information">
+            <div id="see-more-details" onclick="seeMoreDetails()">Ver mais detalhes</div>
+            <div id="information"><?php echo $product->__get('information') ?></div>
+        </div>
         <div id="product-flavors-and-prices">
             <div id="product-flavors">
                 <?php foreach ($product->__get('flavorsAndPrices') as $flavor => $price): ?>

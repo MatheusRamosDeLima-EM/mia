@@ -77,6 +77,21 @@ main {
     width: 100%;
 }
 
+#product-information #see-more-details {
+    background-color: var(--background-color);
+    color: var(--pink-color);
+    border: 1px solid var(--pink-color);
+    padding: 4px;
+}
+
+#product-information #information {
+    display: none;
+}
+
+#product-information #information.visible {
+    display: block;
+}
+
 #product-flavors-and-prices {
     width: 100%;
     max-width: 525px;
@@ -138,10 +153,13 @@ main {
     background-color: var(--pink-color);
     color: var(--background-color);
     border: 1px solid var(--pink-color);
-    border-radius: 40px;
     font-size: 25px;
-    padding: 10px;
+    padding: 7.5px;
     text-decoration: none;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 3px 3px 6px 2px rgba(0, 0, 0, 0.3);
 }
 
 @media only screen and (min-width: 450px) {
@@ -166,6 +184,7 @@ main {
 @media only screen and (min-width: 875px) {
     #product {
         flex-direction: row;
+        align-items: start;
         justify-content: space-around;
         gap: 0;
         width: 95%;

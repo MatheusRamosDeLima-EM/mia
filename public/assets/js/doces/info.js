@@ -30,3 +30,8 @@ function clearSelected() {
         if (productPrice.classList.contains('selected')) productPrice.classList.remove('selected');
     })
 }
+
+function seeMoreDetails() {
+    const information = document.querySelector('#information');
+    information.classList.toggle('visible');
+}
