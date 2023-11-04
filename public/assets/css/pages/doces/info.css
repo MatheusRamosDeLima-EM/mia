@@ -163,10 +163,6 @@ main {
 }
 
 @media only screen and (min-width: 450px) {
-    #product {
-        flex-direction: column;
-    }
-    
     #product-title {
         font-size: 65px;
     }
@@ -181,7 +177,7 @@ main {
     }
 }
 
-@media only screen and (min-width: 875px) {
+@media only screen and (min-width: 925px) {
     #product {
         flex-direction: row;
         align-items: start;
