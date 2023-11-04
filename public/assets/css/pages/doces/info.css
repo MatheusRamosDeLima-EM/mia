@@ -177,7 +177,7 @@ main {
     }
 }
 
-@media only screen and (min-width: 925px) {
+@media only screen and (min-width: 935px) {
     #product {
         flex-direction: row;
         align-items: start;
