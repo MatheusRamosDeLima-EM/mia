@@ -28,5 +28,6 @@
                 <?php endforeach ?>
             </div>
         </div>
+        <a href="/carrinho" id="buy-product">Comprar</a>
     </div>
 </section>
