@@ -1,5 +1,5 @@
 <section id="error-msg">
-    <h1 id="error-title">Puts... Algo deu errado!</h1>
+    <h1 id="error-title">Algo deu errado :(</h1>
     <div id="error-text">
         <p>Provavelmente a página que você está tentando acessar não existe.</p>
         <div id="see-products">
