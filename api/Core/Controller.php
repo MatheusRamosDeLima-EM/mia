@@ -3,7 +3,7 @@
         private $data;
         private string $title;
         private string $style;
-        private string $script;
+        private string|null $script;
 
         public function __construct() {
             $this->data = array();
