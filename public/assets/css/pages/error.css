@@ -8,12 +8,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-    padding: 20px 15px;
-    width: 100%;
-}
-
-#error-content {
+    gap: 5px;
+    margin: 20px 15px;
     width: 95%;
 }
 
@@ -46,25 +42,7 @@ main {
     color: var(--background-color);
     border: 1px solid var(--pink-color);
     padding: 10px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.361);
-}
-
-#error-img {
-    width: 400px;
-    height: 300px;
-}
-
-@media only screen and (min-width: 700px) {
-    #error-msg {
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 0;
-        padding: 10px 15px;
-    }
-
-    #error-content {
-        width: fit-content;
-    }
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.361);
 }
 
 @media only screen and (min-device-width: 1200px) {
