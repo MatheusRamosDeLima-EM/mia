@@ -7,7 +7,6 @@
 
         public function __construct() {
             $this->data = array();
-            $this->script = "";
         }
 
         protected function loadTemplate(string $view_name, $model_data = array()) {
