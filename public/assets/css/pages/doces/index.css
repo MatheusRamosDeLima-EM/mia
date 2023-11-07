@@ -10,6 +10,10 @@ header #doces, header #doces:hover {
     --product-gap: 75px;
 }
 
+main h1 {
+    font-size: 40px;
+}
+
 #products {
     display: grid;
     gap: var(--product-gap);

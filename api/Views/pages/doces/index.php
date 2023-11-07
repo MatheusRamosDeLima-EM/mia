@@ -1,4 +1,4 @@
-<h1>Escolha o doce!</h1>
+<h1>A doçura que você procura</h1>
 <section id="products">
     <?php
         $products = $this->data;
