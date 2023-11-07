@@ -38,7 +38,7 @@ header #home, header #home:hover {
     color: black;
 }
 
-#apresentation-txt a {
+#btn-see-products {
     color: var(--pink-color);
     background-color: var(--background-color);
     padding: 10px;
@@ -65,7 +65,7 @@ header #home, header #home:hover {
 }
 
 @media only screen and (min-device-width: 1200px) {
-    #apresentation-txt a {
+    #btn-see-products:hover {
         background-color: var(--gray-color);
         transition: 0.3s;
     }
