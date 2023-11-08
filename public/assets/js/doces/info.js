@@ -33,5 +33,7 @@ function clearSelected() {
 
 function seeMoreDetails() {
     const information = document.querySelector('#information');
+    const arrow = document.querySelector('#arrow');
     information.classList.toggle('visible');
+    arrow.classList.toggle('rotate');
 }

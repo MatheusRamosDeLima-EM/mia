@@ -76,21 +76,38 @@ main {
     width: 100%;
 }
 
-#product-information #see-more-details {
+#see-more-details {
     background-color: var(--background-color);
     color: var(--pink-color);
     border: 1px solid var(--pink-color);
     padding: 6px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#product-information #information {
+#see-more-details #arrow {
+    padding: 6px;
+    box-shadow: 2px -2px 0 1px var(--pink-color) inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+    rotate: 315deg;
+    transition: 0.5s;
+}
+
+#see-more-details #arrow.rotate {
+    rotate: 135deg;
+    transition: 0.5s;
+}
+
+#information {
     display: none;
     padding: 3px 5px;
     background-color: var(--gray-color);
 }
 
-#product-information #information.visible {
+#information.visible {
     display: block;
 }
 

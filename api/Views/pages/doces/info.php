@@ -16,7 +16,10 @@
         <h1 id="product-title"><?php echo $product->__get('name') ?></h1>
         <p id="product-slogan"><?php echo $product->__get('slogan') ?></p>
         <div id="product-information">
-            <div id="see-more-details" onclick="seeMoreDetails()">Ver mais detalhes</div>
+            <div id="see-more-details" onclick="seeMoreDetails()">
+                <span>Ver mais detalhes</span>
+                <div id="arrow"></div>
+            </div>
             <div id="information"><?php echo $product->__get('information') ?></div>
         </div>
         <div id="product-flavors-and-prices">
