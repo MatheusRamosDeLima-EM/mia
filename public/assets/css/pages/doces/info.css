@@ -243,12 +243,12 @@ main {
         transition: 0.3s;
     }
 
-    #product-flavors label {
+    #product-flavors label:hover {
         background-color: var(--gray-color);
         transition: 0.3s;
     }
 
-    #product-flavors label.selected {
+    #product-flavors label.selected:hover {
         background-color: var(--pink-color);
     }
 
