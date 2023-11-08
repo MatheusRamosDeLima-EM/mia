@@ -30,11 +30,7 @@ header #home, header #home:hover {
     flex-direction: column;
     justify-content: space-around;
     gap: 20px;
-}
-
-#apresentation-txt p {
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
     color: black;
 }
 
@@ -46,7 +42,7 @@ header #home, header #home:hover {
     font-family: 'Poppins', sans-serif;
     border: 1px solid var(--background-color);
     box-shadow: 2px 2px 3px 1px rgba(30, 22, 22, 0.2);
-    font-size: 20px;
+    font-size: 22px;
     width: fit-content;
     margin: 0 auto;
 }
