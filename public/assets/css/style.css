@@ -128,7 +128,17 @@ footer {
 }
 
 #dark-background {
+    position: fixed;
+    width: 40vw;
+    height: 100vh;
+    top: var(--header-height);
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
+}
+
+#dark-background.active {
+    display: block;
 }
 
 @media only screen and (min-width: 650px) {
@@ -172,17 +182,7 @@ footer {
     }
 
     #dark-background {
-        position: fixed;
-        width: 40vw;
-        height: 100vh;
-        top: var(--header-height);
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.5);
         display: none;
-    }
-    
-    #dark-background.active {
-        display: block;
     }
 }
 
