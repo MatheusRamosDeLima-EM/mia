@@ -42,5 +42,6 @@
     <footer onclick="leaveMenuMobile()">
         <p>&COPY; MatheusRamosDeLima 2023</p>
     </footer>
+    <section id="dark-background"></section>
 </body>
 </html>
