@@ -181,7 +181,7 @@ footer {
         height: fit-content;
     }
 
-    #dark-background {
+    #dark-background, #dark-background.active {
         display: none;
     }
 }

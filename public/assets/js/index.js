@@ -13,4 +13,5 @@ menuButton.addEventListener('click', () => {
 
 function leaveMenuMobile() {
     menuList.classList.remove('active');
+    darkBackground.classList.remove('active');
 }

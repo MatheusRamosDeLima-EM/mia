@@ -34,14 +34,14 @@
             </ul>
         </nav>
     </header>
-    <main onclick="leaveMenuMobile()">
+    <main>
         <?php
             $this->loadViewOnTemplate($view_name, $model_data);
         ?>
     </main>
-    <footer onclick="leaveMenuMobile()">
+    <footer>
         <p>&COPY; MatheusRamosDeLima 2023</p>
     </footer>
-    <section id="dark-background"></section>
+    <section id="dark-background" onclick="leaveMenuMobile()"></section>
 </body>
 </html>
