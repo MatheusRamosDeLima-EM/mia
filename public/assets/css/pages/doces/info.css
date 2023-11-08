@@ -87,6 +87,11 @@ main {
     justify-content: space-between;
 }
 
+#see-more-details:hover {
+    background-color: var(--gray-color);
+    transition: 0.3s;
+}
+
 #see-more-details #arrow {
     padding: 6px;
     box-shadow: 2px -2px 0 1px var(--pink-color) inset;
