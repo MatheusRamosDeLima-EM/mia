@@ -87,11 +87,6 @@ main {
     justify-content: space-between;
 }
 
-#see-more-details:hover {
-    background-color: var(--gray-color);
-    transition: 0.3s;
-}
-
 #see-more-details #arrow {
     padding: 6px;
     box-shadow: 2px -2px 0 1px var(--pink-color) inset;
@@ -184,6 +179,7 @@ main {
     display: flex;
     justify-content: center;
     box-shadow: 3px 3px 6px 2px rgba(0, 0, 0, 0.3);
+    transition: 0.4s;
 }
 
 @media only screen and (min-width: 450px) {
@@ -238,5 +234,27 @@ main {
 @media only screen and (min-width: 1200px) {
     #product-information {
         width: 90%;
+    }
+}
+
+@media only screen and (min-device-width: 1200px) {
+    #see-more-details:hover {
+        background-color: var(--gray-color);
+        transition: 0.3s;
+    }
+
+    #product-flavors label {
+        background-color: var(--gray-color);
+        transition: 0.3s;
+    }
+
+    #product-flavors label.selected {
+        background-color: var(--pink-color);
+    }
+
+    #buy-product:hover {
+        background-color: var(--background-color);
+        color: var(--pink-color);
+        transition: 0.4s;
     }
 }
