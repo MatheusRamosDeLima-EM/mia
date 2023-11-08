@@ -18,7 +18,7 @@
         ),
         'bolo' => new Product(
             'Bolo',
-            'O bolo que lembra memórias de infância',
+            'O bolo cremoso e saboroso',
             ['Chocolate' => 5.5],
             'bolo.jpg',
             true,
