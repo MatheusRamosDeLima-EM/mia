@@ -13,7 +13,19 @@ header #sobre, header #sobre:hover {
     padding-inline: 15px;
     width: 100%;
     max-width: 850px;
-    font-size: 20px;
+    font-size: 25px;
+}
+
+#content div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#content div .text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 #content h2 {
