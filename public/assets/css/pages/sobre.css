@@ -13,7 +13,6 @@ header #sobre, header #sobre:hover {
     padding-inline: 15px;
     width: 100%;
     max-width: 850px;
-    font-size: 25px;
 }
 
 #content div {
@@ -23,9 +22,8 @@ header #sobre, header #sobre:hover {
 }
 
 #content div .text {
-    display: flex;
-    flex-direction: column;
     gap: 5px;
+    font-size: 22px;
 }
 
 #content h2 {
