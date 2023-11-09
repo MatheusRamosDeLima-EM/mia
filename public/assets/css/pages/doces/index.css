@@ -10,15 +10,11 @@ header #doces, header #doces:hover {
     --product-gap: 75px;
 }
 
-main h1 {
-    font-size: 40px;
-}
-
 #products {
     display: grid;
     gap: var(--product-gap);
     width: fit-content;
-    margin: 20px auto;
+    margin: 40px auto;
 }
 
 .product {

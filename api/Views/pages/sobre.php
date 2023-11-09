@@ -12,4 +12,12 @@
             <li><span>Valores:</span> Atender a todo tipo de público e necessidade do cliente.</li>
         </ul>
     </div>
+    <div>
+        <h2>Do desenvolvedor</h2>
+        <p><strong>Matheus Ramos de Lima</strong> é o desenvolvedor e fundador deste site.</p>
+        <h3>Direitos de uso</h3>
+        <p>O site apresenta algumas ilustrações e imagens não originárias do negócio, que provém de plataformas como <a href="https://www.pexels.com/pt-br/" target="_blank" rel="external">Pexels</a>, que disponibilizam imagens para uso gratuito e sem fins lucrativos.</p>
+        <h3>Licença de uso</h3>
+        <p>Este é um projeto com objetivo acadêmico. Caso se interessou na sua construção, o projeto é open source e está localizado no <a href="https://github.com/MatheusRamosDeLima-EM/mia/" target="_blank" rel="external">GitHub</a>.</p>
+    </div>
 </section>

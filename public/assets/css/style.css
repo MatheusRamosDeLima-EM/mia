@@ -110,7 +110,7 @@ main h1 {
     padding: 20px;
     font-family: 'Poppins', sans-serif;
     color: var(--pink-color);
-    font-size: 35px;
+    font-size: 40px;
 }
 
 /* Footer */
@@ -179,6 +179,10 @@ footer {
     #menu-list a {
         padding: 10px 50px;
         height: fit-content;
+    }
+
+    main h1 {
+        font-size: 45px;
     }
 
     #dark-background, #dark-background.active {
