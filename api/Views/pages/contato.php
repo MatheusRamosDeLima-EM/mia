@@ -13,16 +13,16 @@
             </ul>
         ";
 
-        if (empty($nome)) {
-            $erro['nome'] = 'O nome é obrigatório.';
+        if (empty($name)) {
+            $erro['name'] = 'O nome é obrigatório.';
         }
     
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $erro['email'] = 'O e-mail é inválido.';
         }
     
-        if (empty($mensagem)) {
-            $erro['mensagem'] = 'A mensagem é obrigatória.';
+        if (empty($text)) {
+            $erro['text'] = 'A mensagem é obrigatória.';
         }
 
         if (empty($erro)) {
