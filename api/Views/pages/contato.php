@@ -18,7 +18,6 @@
         }
 
         if (empty($erro)) {
-            // Enviar email de forma mais simples:
             $destinatario = 'mia.lojadedoces@gmail.com';
             $assunto = "$nome entrou em contato!";
             $mensagem_html = '
@@ -27,28 +26,8 @@
                 <p><strong>E-mail</strong>: ' . $email . '</p>
                 <p><strong>Mensagem</strong>: ' . $mensagem . '</p>
             ';
-            // Envia o e-mail
+            
             mail($destinatario, $assunto, $mensagem_html);
-
-
-            // Enviar email de forma completa:
-
-            // $mail = new PHPMailer();
-            // $mail->From = $email;
-            // $mail->FromName = $nome;
-            // $mail->AddAddress('contato@example.com');
-            // $mail->Subject = 'Mensagem de contato';
-            // $mail->Body = '
-            //     <h1>Mensagem de contato</h1>
-            //     <p>Nome: <strong>' . $nome . '</strong></p>
-            //     <p>E-mail: <strong>' . $email . '</strong></p>
-            //     <p>Mensagem: <strong>' . $mensagem . '</strong></p>
-            // ';
-            // if (!$mail->Send()) {
-            //     echo 'Erro ao enviar o e-mail: ' . $mail->ErrorInfo;
-            // } else {
-            //     echo 'E-mail enviado com sucesso!';
-            // }
 
             if (!empty($erro)) {
                 foreach ($erro as $campo => $mensagem) {
@@ -58,6 +37,8 @@
                 echo '<p>E-mail enviado com sucesso</p>';
             }
         }
+    } else {
+        echo '<p>E-mail não enviado</p>';
     }
 ?>
 <h1>Nos contate</h1>
