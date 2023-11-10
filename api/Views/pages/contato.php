@@ -2,8 +2,15 @@
     if (isset($_POST['submit'])) {
         $name = $_POST['name'];
         $email = $_POST['email'];
-        $email = $_POST['email'];
         $text = $_POST['text'];
+
+        echo "
+            <ul>
+                <li>Nome: $name</li>
+                <li>E-mail: $email</li>
+                <li>Mensagem: $text</li>
+            </ul>
+        ";
 
         if (empty($nome)) {
             $erro['nome'] = 'O nome é obrigatório.';
@@ -26,7 +33,7 @@
                 <p><strong>E-mail</strong>: ' . $email . '</p>
                 <p><strong>Mensagem</strong>: ' . $mensagem . '</p>
             ';
-            
+
             mail($destinatario, $assunto, $mensagem_html);
 
             if (!empty($erro)) {
