@@ -27,12 +27,12 @@
 
         if (empty($erro)) {
             $destinatario = 'mia.lojadedoces@gmail.com';
-            $assunto = "$nome entrou em contato!";
+            $assunto = "$name entrou em contato!";
             $mensagem_html = '
                 <h1>Mensagem de contato:</h1>
-                <p><strong>Nome</strong>: ' . $nome . '</p>
+                <p><strong>Nome</strong>: ' . $name . '</p>
                 <p><strong>E-mail</strong>: ' . $email . '</p>
-                <p><strong>Mensagem</strong>: ' . $mensagem . '</p>
+                <p><strong>Mensagem</strong>: ' . $text . '</p>
             ';
 
             mail($destinatario, $assunto, $mensagem_html);
