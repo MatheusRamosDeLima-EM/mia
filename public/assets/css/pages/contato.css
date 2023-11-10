@@ -3,3 +3,16 @@ header #contato, header #contato:hover {
     color: var(--background-color);
     cursor: default;
 }
+
+form {
+    width: 95%;
+    margin: 10px auto;
+    max-width: 500px;
+    padding: 15px;
+    border: 2px solid var(--pink-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}

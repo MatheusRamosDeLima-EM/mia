@@ -1,5 +1,5 @@
 <h1>Nos contate</h1>
-<form action="<?= $PHP_SELF ?>" method="post">
+<form action="/contato" method="post">
     <div id="container-name">
         <label for="input-name">Nome</label>
         <input type="text" name="name" id="input-name">
