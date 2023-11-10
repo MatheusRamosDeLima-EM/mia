@@ -5,6 +5,7 @@
         $text = $_POST['text'];
 
         echo "
+            <p>Dados enviados:</p>
             <ul>
                 <li>Nome: $name</li>
                 <li>E-mail: $email</li>
@@ -36,16 +37,14 @@
 
             mail($destinatario, $assunto, $mensagem_html);
 
-            if (!empty($erro)) {
-                foreach ($erro as $campo => $mensagem) {
-                    echo '<p class="erro">' . $mensagem . '</p>';
-                }
-            } else {
-                echo '<p>E-mail enviado com sucesso</p>';
+            echo '<p>E-mail enviado com sucesso</p>';
+        } else {
+            foreach ($erro as $campo => $mensagem) {
+                echo '<p class="erro">' . $mensagem . '</p>';
             }
         }
     } else {
-        echo '<p>E-mail não enviado</p>';
+        echo '<p>Dados não enviados</p>';
     }
 ?>
 <h1>Nos contate</h1>
