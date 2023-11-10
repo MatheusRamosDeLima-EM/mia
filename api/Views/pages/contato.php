@@ -26,18 +26,18 @@
         }
 
         if (empty($erro)) {
-            $destinatario = 'mia.lojadedoces@gmail.com';
-            $assunto = "$name entrou em contato!";
-            $mensagem_html = '
-                <h1>Mensagem de contato:</h1>
-                <p><strong>Nome</strong>: ' . $name . '</p>
-                <p><strong>E-mail</strong>: ' . $email . '</p>
-                <p><strong>Mensagem</strong>: ' . $text . '</p>
-            ';
+            // $destinatario = 'mia.lojadedoces@gmail.com';
+            // $assunto = "$name entrou em contato!";
+            // $mensagem_html = '
+            //     <h1>Mensagem de contato:</h1>
+            //     <p><strong>Nome</strong>: ' . $name . '</p>
+            //     <p><strong>E-mail</strong>: ' . $email . '</p>
+            //     <p><strong>Mensagem</strong>: ' . $text . '</p>
+            // ';
 
-            mail($destinatario, $assunto, $mensagem_html);
+            // mail($destinatario, $assunto, $mensagem_html);
 
-            echo '<p>E-mail enviado com sucesso</p>';
+            // echo '<p>E-mail enviado com sucesso</p>';
         } else {
             foreach ($erro as $campo => $mensagem) {
                 echo '<p class="erro">' . $mensagem . '</p>';
