@@ -6,7 +6,8 @@
             ['Mixed' => 10],
             'brigadeiro2.jpg',
             true,
-            '<p>O doce tradicional brasileiro agora com mais sabores e possibilidades. Mais do que um simples brigadeiro, uma explosão de emoções. É o preferido de muitos, com seu sabor doce e cremoso. A compra acompanha três brigadeiros(de chocolate ou não) por palito</p>'
+            '<p>O doce tradicional brasileiro agora com mais sabores e possibilidades. Mais do que um simples brigadeiro, uma explosão de emoções. É o preferido de muitos, com seu sabor doce e cremoso.</p>
+<p>A compra acompanha <strong>três brigadeiros</strong>(de chocolate ou coco) por <strong>palito</strong></p>'
         ),
         'palha-italiana' => new Product(
             'Palha italiana',
