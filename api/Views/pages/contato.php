@@ -1,6 +1,7 @@
 <?php
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
+    use PHPMailer\PHPMailer\SMTP;
 
     $phpMailerPath = $_SERVER['DOCUMENT_ROOT'].'/api/PHPMailer';
     require_once $phpMailerPath . '/Exception.php';
@@ -34,18 +35,25 @@
         }
 
         if (empty($erro)) {
-            $mail = new PHPMailer();
+            $mail = new PHPMailer(true);
 
-            $mail->IsSMTP();
+            //Server settings
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+            $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
-            $mail->Port = 587;
             $mail->SMTPAuth = true;
-            $mail->Username = 'mia.lojadedoces.envio@gmail.com';
+            $mail->Username = 'mia.lojadedoces.envio@gmail';
             $mail->Password = 'miadoces456';
-            $mail->From = 'mia.lojadedoces.envio@gmail.com';
-            $mail->FromName = $name;
-            $mail->AddAddress('mia.lojadedoces@gmail.com');
-            $mail->SMTPSecure = 'tls';
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port = 465;
+
+            //Recipients
+            $mail->setFrom('mia.lojadedoces.envio@gmail', $name);
+            $mail->addAddress('mia.lojadedoces@gmail', 'Mia - Loja de doces');
+            $mail->addReplyTo('mia.lojadedoces.envio@gmail', $name);
+
+            //Content
+            $mail->isHTML(true);
             $mail->CharSet = "utf-8";
             $mail->Subject = "$name entrou em contato!";
             $mail->Body = "
@@ -56,12 +64,35 @@
                 <p>$text</p>
             ";
 
-            // Envia o e-mail
-            if (!$mail->Send()) {
-                echo 'Erro ao enviar o e-mail: ' . $mail->ErrorInfo;
-            } else {
-                echo 'E-mail enviado com sucesso!';
-            }
+            $mail->send();
+            echo 'Mensagem foi enviada';
+
+            // $mail->IsSMTP();
+            // $mail->Host = 'smtp.gmail.com';
+            // $mail->Port = 465;
+            // $mail->SMTPAuth = true;
+            // $mail->Username = 'mia.lojadedoces.envio@gmail.com';
+            // $mail->Password = 'miadoces456';
+            // $mail->From = 'mia.lojadedoces.envio@gmail.com';
+            // $mail->FromName = $name;
+            // $mail->AddAddress('mia.lojadedoces@gmail.com');
+            // $mail->SMTPSecure = 'tls';
+            // $mail->CharSet = "utf-8";
+            // $mail->Subject = "$name entrou em contato!";
+            // $mail->Body = "
+            //     <h2>Informações do cliente:</h2>
+            //     <p><strong>Nome:</strong> $name</p>
+            //     <p><strong>E-mail:</strong> $email</p>
+            //     <h2><strong>Mensagem:</strong></h2>
+            //     <p>$text</p>
+            // ";
+
+            // // Envia o e-mail
+            // if (!$mail->Send()) {
+            //     echo 'Erro ao enviar o e-mail: ' . $mail->ErrorInfo;
+            // } else {
+            //     echo 'E-mail enviado com sucesso!';
+            // }
         } else {
             foreach ($erro as $campo => $mensagem) {
                 echo '<p class="erro">' . $mensagem . '</p>';
