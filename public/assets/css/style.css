@@ -39,6 +39,7 @@ header h1 {
     margin: 0 auto;
 font-size: 35px;
 font-family:'Comic Neue', cursive;
+color: var(--pink-color);
 }
 
 #menu-button {
