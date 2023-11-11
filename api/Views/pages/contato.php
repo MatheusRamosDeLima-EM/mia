@@ -42,15 +42,15 @@
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'mia.lojadedoces.envio@gmail';
+            $mail->Username = 'mia.lojadedoces.envio@gmail.com';
             $mail->Password = 'miadoces456';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
 
             //Recipients
-            $mail->setFrom('mia.lojadedoces.envio@gmail', $name);
-            $mail->addAddress('mia.lojadedoces@gmail', 'Mia - Loja de doces');
-            $mail->addReplyTo('mia.lojadedoces.envio@gmail', $name);
+            $mail->setFrom('mia.lojadedoces.envio@gmail.com', $name);
+            $mail->addAddress('mia.lojadedoces@gmail.com', 'Mia - Loja de doces');
+            $mail->addReplyTo('mia.lojadedoces.envio@gmail.com', $name);
 
             //Content
             $mail->isHTML(true);
