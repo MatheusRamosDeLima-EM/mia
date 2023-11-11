@@ -36,15 +36,15 @@
         if (empty($erro)) {
             $mail = new PHPMailer();
 
+            $mail->IsSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->Port = 587;
+            $mail->SMTPAuth = true;
+            $mail->Username = 'mia.lojadedoces.envio@gmail.com';
+            $mail->Password = 'miadoces456';
             $mail->From = 'mia.lojadedoces.envio@gmail.com';
             $mail->FromName = $name;
             $mail->AddAddress('mia.lojadedoces@gmail.com');
-            if ($mail->IsSMTP()) {
-                // A autenticação é necessária
-                $mail->SMTPAuth = true;
-                $mail->Username = 'mia.lojadedoces.envio@gmail.com';
-                $mail->Password = 'miadoces456';
-            }
             $mail->SMTPSecure = 'tls';
             $mail->CharSet = "utf-8";
             $mail->Subject = "$name entrou em contato!";
