@@ -1,9 +1,11 @@
 <?php
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
-    require './PHPMailer/Exception.php';
-    require './PHPMailer/PHPMailer.php';
-    require './PHPMailer/SMTP.php';
+
+    $phpMailerPath = $_SERVER['DOCUMENT_ROOT'].'/api/PHPMailer';
+    require_once $phpMailerPath . '/Exception.php';
+    require_once $phpMailerPath . '/PHPMailer.php';
+    require_once $phpMailerPath . '/SMTP.php';
 
     if (isset($_POST['submit'])) {
         $name = $_POST['name'];
@@ -43,6 +45,7 @@
                 $mail->Username = 'mia.lojadedoces.envio@gmail.com';
                 $mail->Password = 'miadoces456';
             }
+            $mail->CharSet = "utf-8";
             $mail->Subject = "$name entrou em contato!";
             $mail->Body = "
                 <h2>Informações do cliente:</h2>
