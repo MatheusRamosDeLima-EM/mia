@@ -3,7 +3,7 @@
         'brigadeiro' => new Product(
             'Brigadeiro',
             'O doce que é paixão nacional',
-            ['Tradicional' => 8, 'Branquinho' => 8],
+            ['Tradicional' => 10, 'Beijinho' => 10],
             'brigadeiro2.jpg',
             true,
             '<p>O doce tradicional brasileiro agora com mais sabores e possibilidades. Mais do que um simples brigadeiro, uma explosão de emoções. É o preferido de muitos, com seu sabor doce e cremoso.</p>'
