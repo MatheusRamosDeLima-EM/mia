@@ -45,6 +45,7 @@
                 $mail->Username = 'mia.lojadedoces.envio@gmail.com';
                 $mail->Password = 'miadoces456';
             }
+            $mail->SMTPSecure = 'tls';
             $mail->CharSet = "utf-8";
             $mail->Subject = "$name entrou em contato!";
             $mail->Body = "
