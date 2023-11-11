@@ -1,4 +1,10 @@
-<?php 
+<?php
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+    require './PHPMailer/Exception.php';
+    require './PHPMailer/PHPMailer.php';
+    require './PHPMailer/SMTP.php';
+
     if (isset($_POST['submit'])) {
         $name = $_POST['name'];
         $email = $_POST['email'];
@@ -26,25 +32,37 @@
         }
 
         if (empty($erro)) {
-            // $destinatario = 'mia.lojadedoces@gmail.com';
-            // $assunto = "$name entrou em contato!";
-            // $mensagem_html = '
-            //     <h1>Mensagem de contato:</h1>
-            //     <p><strong>Nome</strong>: ' . $name . '</p>
-            //     <p><strong>E-mail</strong>: ' . $email . '</p>
-            //     <p><strong>Mensagem</strong>: ' . $text . '</p>
-            // ';
+            $mail = new PHPMailer();
 
-            // mail($destinatario, $assunto, $mensagem_html);
+            $mail->From = 'mia.lojadedoces.envio@gmail.com';
+            $mail->FromName = $name;
+            $mail->AddAddress('mia.lojadedoces@gmail.com');
+            if ($mail->IsSMTP()) {
+                // A autenticação é necessária
+                $mail->SMTPAuth = true;
+                $mail->Username = 'mia.lojadedoces.envio@gmail.com';
+                $mail->Password = 'miadoces456';
+            }
+            $mail->Subject = "$name entrou em contato!";
+            $mail->Body = "
+                <h2>Informações do cliente:</h2>
+                <p><strong>Nome:</strong> $name</p>
+                <p><strong>E-mail:</strong> $email</p>
+                <h2><strong>Mensagem:</strong></h2>
+                <p>$text</p>
+            ";
 
-            // echo '<p>E-mail enviado com sucesso</p>';
+            // Envia o e-mail
+            if (!$mail->Send()) {
+                echo 'Erro ao enviar o e-mail: ' . $mail->ErrorInfo;
+            } else {
+                echo 'E-mail enviado com sucesso!';
+            }
         } else {
             foreach ($erro as $campo => $mensagem) {
                 echo '<p class="erro">' . $mensagem . '</p>';
             }
         }
-    } else {
-        echo '<p>Dados não enviados</p>';
     }
 ?>
 <h1>Nos contate</h1>
