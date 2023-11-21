@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/assets/css/style.css" async>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" async>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" async>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/pages/<?php echo $this->getStyle() ?>.css" async>
     <script src="/assets/js/index.js" defer></script>
     <?php if ($this->getScript()): ?>
