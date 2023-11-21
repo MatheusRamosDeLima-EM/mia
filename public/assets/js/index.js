@@ -1,17 +1,27 @@
-// Menu
-const menuButton = document.querySelector('#menu-button');
+// Menu list (html element)
 const menuList = document.querySelector('#menu-list');
 
-// Dark Background
+// Dark Background (html element)
 const darkBackground = document.querySelector('#dark-background');
 
-// Click in Menu button
-menuButton.addEventListener('click', () => {
-    menuList.classList.toggle('active');
-    darkBackground.classList.toggle('active');
-})
+// Click in Menu button (html element event)
+function menuMobileEnable() {
+    toggleClassActive(menuList);
+    toggleClassActive(darkBackground);
+}
 
-function leaveMenuMobile() {
-    menuList.classList.remove('active');
-    darkBackground.classList.remove('active');
+// Click in Dark Background (html element event)
+function menuMobileDisable() {
+    removeClassActive(menuList);
+    removeClassActive(darkBackground);
+}
+
+// Toggle the class "active" in a html element
+function toggleClassActive(element) {
+    element.classList.toggle('active');
+}
+
+// Remove the class "active" in a html element
+function removeClassActive(element) {
+    element.classList.remove('active');
 }

@@ -17,7 +17,7 @@
     <header>
         <h1>MIA</h1>
         <nav>
-            <div id="menu-button">
+            <div id="menu-button" onclick="menuMobileEnable()">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -42,6 +42,6 @@
     <footer>
         <p>&COPY; MatheusRamosDeLima 2023</p>
     </footer>
-    <section id="dark-background" onclick="leaveMenuMobile()"></section>
+    <section id="dark-background" onclick="menuMobileDisable()"></section>
 </body>
 </html>
