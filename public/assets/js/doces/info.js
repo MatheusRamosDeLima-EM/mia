@@ -1,5 +1,5 @@
 // Html elements (collection)
-const productsFlavors = document.querySelectorAll("label.product-flavor");
+const productsFlavors = document.querySelectorAll("button.product-flavor");
 const productsPrices = document.querySelectorAll(".product-price");
 
 // Define the first element of the collections to selected (class)
@@ -20,9 +20,9 @@ productsFlavors.forEach(productFlavor => {
         // Add class selected in the product flavor clicked
         productFlavor.classList.add('selected');
         // Get the attribute "for" in the product flavor (label element) and attribute this to product price id
-        const productPriceId = productFlavor.getAttribute('for');
+        const flavorData = productFlavor.getAttribute('data-flavor');
         // Search the product price element with your id
-        const productPrice = document.querySelector(`#${productPriceId}`);
+        const productPrice = document.querySelector(`.product-price[data-price="${flavorData}"]`);
         // Add class selected in the product price search
         productPrice.classList.add('selected');
     })

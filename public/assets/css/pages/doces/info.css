@@ -129,7 +129,7 @@ main {
     gap: 20px;
 }
 
-#product-flavors label {
+#product-flavors button {
     background-color: var(--background-color);
     color: var(--pink-color);
     border: 1px solid var(--pink-color);
@@ -139,7 +139,7 @@ main {
     cursor: pointer;
 }
 
-#product-flavors label.selected {
+#product-flavors button.selected {
     background-color: var(--pink-color);
     color: var(--background-color);
     cursor: default;
@@ -244,12 +244,12 @@ main {
         transition: 0.3s;
     }
 
-    #product-flavors label:hover {
+    #product-flavors button:hover {
         background-color: var(--gray-color);
         transition: 0.3s;
     }
 
-    #product-flavors label.selected:hover {
+    #product-flavors button.selected:hover {
         background-color: var(--pink-color);
     }
 
