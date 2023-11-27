@@ -28,7 +28,7 @@
         'biscoitos' => new Product (
             'Biscoitos',
             'O lanche perfeito para qualquer momento',
-            ['Clássico' => 6, 'Chocolate' => 6.5, 'Baunilha' => 6.5, 'Aveia' => 6],
+            ['Clássico' => 6, 'Chocolate' => 6.5, 'Baunilha' => 6.5],
             'biscoitos.jpg',
             true,
             '<p>Biscoitos são uma das sobremesas mais populares do mundo. Eles são feitos com ingredientes simples, mas são deliciosos e versáteis.</p>
