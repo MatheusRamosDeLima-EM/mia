@@ -12,6 +12,7 @@ header #doces, header #doces:hover {
 
 #products {
     display: grid;
+    grid-template-columns: auto;
     gap: var(--product-gap);
     width: fit-content;
     margin: 40px auto;
@@ -64,7 +65,13 @@ header #doces, header #doces:hover {
 
 @media only screen and (min-width: 800px) {
     #products {
-        grid-template-columns: var(--product-width) var(--product-width);
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #products {
+        grid-template-columns: auto auto auto;
     }
 }
 
