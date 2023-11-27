@@ -1,6 +1,5 @@
 main {
     display: flex;
-    align-items: center;
 }
 
 #product {
@@ -207,7 +206,7 @@ main {
         gap: 0;
         width: 95%;
         height: fit-content;
-        margin: 10px auto;
+        margin: 20px auto;
     }
 
     #product-sect-image {
