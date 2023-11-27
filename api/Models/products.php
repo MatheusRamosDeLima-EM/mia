@@ -20,7 +20,7 @@
         'bolo' => new Product(
             'Bolo',
             'A sobremesa perfeita para celebrar',
-            ['Chocolate' => 12, 'Baunilha' => 11.5],
+            ['Chocolate' => 12, 'Coco' => 11.5],
             'bolo.jpg',
             true,
             '<p>Bolo caseiro feito com ingredientes de qualidade e extremo cuidado com o sabor e textura. Fará você ter experiências surreais. Bolo saboroso e fofinho, ideal para aproveitar em diversos momentos e com companhia.</p>'
@@ -28,12 +28,21 @@
         'biscoitos' => new Product (
             'Biscoitos',
             'O lanche perfeito para qualquer momento',
-            ['Clássico' => 6, 'Chocolate' => 6.5, 'Baunilha' => 6.5],
+            ['Clássico' => 5, 'Chocolate' => 6.5, 'Baunilha' => 6],
             'biscoitos.jpg',
             true,
             '<p>Biscoitos são uma das sobremesas mais populares do mundo. Eles são feitos com ingredientes simples, mas são deliciosos e versáteis.</p>
             <p>Nossos biscoitos são feitos com ingredientes de alta qualidade e são cuidadosamente assados para garantir o melhor sabor.</p>
             <p>A compra acompanha um pacote com 100g de biscoitos de um dos sabores disponíveis!</p>'
+        ),
+        'cupcake' => new Product (
+            'Cupcake',
+            'Um pedacinho de felicidade',
+            ['Chocolate' => 7.5, 'Baunilha' => 7, 'Frutas' => 8],
+            'cupcake.jpg',
+            true,
+            '<p>Cupcakes são a sobremesa perfeita para qualquer ocasião, seja um evento especial ou um dia comum. Eles são deliciosos, versáteis e podem ser personalizados para atender a todos os gostos.</p>
+            <p>Nossos cupcakes são feitos com ingredientes de alta qualidade e são cuidadosamente decorados para garantir o melhor sabor e apresentação.</p>'
         )
     ];
 ?>
