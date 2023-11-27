@@ -20,7 +20,7 @@
         'bolo' => new Product(
             'Bolo',
             'A sobremesa perfeita para celebrar',
-            ['Chocolate' => 5.5],
+            ['Chocolate' => 12, 'Baunilha' => 11.5],
             'bolo.jpg',
             true,
             '<p>Bolo caseiro feito com ingredientes de qualidade e extremo cuidado com o sabor e textura. Fará você ter experiências surreais. Bolo saboroso e fofinho, ideal para aproveitar em diversos momentos e com companhia.</p>'
