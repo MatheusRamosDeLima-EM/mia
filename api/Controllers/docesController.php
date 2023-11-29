@@ -3,9 +3,9 @@
         public function index() {
             require $this->productsPath();
 
+            $this->loadTemplate('doces/index', $products);
             $this->setTitle('Todos os doces - MIA');
             $this->setStyle('doces/index');
-            $this->loadTemplate('doces/index', $products);
         }
         
         public function info($data = []) {
@@ -24,10 +24,10 @@
             } else if (!verifyProductInURIAndProducts($products, $productName)) {
                 call_user_func_array(array(new errorController, 'index'), []);
             } else {
+                $this->loadTemplate('doces/info', ['products' => $products, 'productId' => $productName]);
                 $this->setTitle($products[$productName]->__get('name') . ' - MIA');
                 $this->setStyle('doces/info');
                 $this->setScript('doces/info');
-                $this->loadTemplate('doces/info', ['products' => $products, 'productId' => $productName]);
             }
         }
 
