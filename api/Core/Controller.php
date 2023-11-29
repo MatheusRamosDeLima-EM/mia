@@ -1,9 +1,9 @@
 <?php 
     class Controller {
-        private $data;
+        private array $data;
         private string $title;
         private string $style;
-        private string|null $script;
+        private string $script;
 
         public function __construct() {
             $this->data = array();
