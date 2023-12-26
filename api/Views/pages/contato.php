@@ -1,13 +1,4 @@
 <?php
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
-    use PHPMailer\PHPMailer\SMTP;
-
-    $phpMailerPath = $_SERVER['DOCUMENT_ROOT'].'/api/PHPMailer';
-    require_once $phpMailerPath . '/Exception.php';
-    require_once $phpMailerPath . '/PHPMailer.php';
-    require_once $phpMailerPath . '/SMTP.php';
-
     if (isset($_POST['submit'])) {
         $name = $_POST['name'];
         $email = $_POST['email'];
@@ -26,28 +17,6 @@
         }
 
         if (empty($erro)) {
-            $mail = new PHPMailer(true);
-
-            $mail->IsSMTP();
-            $mail->Host = 'smtp.gmail.com';
-            $mail->Port = 465;
-            $mail->SMTPAuth = true;
-            $mail->Username = 'mia.lojadedoces.envio@gmail.com';
-            $mail->Password = 'miadoces456';
-            $mail->From = 'mia.lojadedoces.envio@gmail.com';
-            $mail->FromName = $name;
-            $mail->AddAddress('mia.lojadedoces@gmail.com');
-            $mail->SMTPSecure = 'tls';
-            $mail->CharSet = "utf-8";
-            $mail->Subject = "$name entrou em contato!";
-            $mail->Body = "
-                <h2>Informações do cliente:</h2>
-                <p><strong>Nome:</strong> $name</p>
-                <p><strong>E-mail:</strong> $email</p>
-                <h2><strong>Mensagem:</strong></h2>
-                <p>$text</p>
-            ";
-
             // Envia o e-mail
             if (!$mail->Send()) {
                 echo 'Erro ao enviar o e-mail: ' . $mail->ErrorInfo;
