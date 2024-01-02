@@ -36,14 +36,18 @@
 
             $pathController = $_SERVER['DOCUMENT_ROOT']."/api/Controllers/$controller.php";
 
-            if (!file_exists($pathController) || !method_exists($controller, $method)) {
+            if (!file_exists($pathController) || !method_exists($controller, $method) || method_exists('Controller', $method)) {
                 $controller = 'errorController';
                 $method = 'index';
                 $paramethers = [];
             }
 
-            $c = new $controller;
-            call_user_func_array(array($c, $method), array($paramethers));
+            try {
+                $c = new $controller;
+                call_user_func_array(array($c, $method), $paramethers);
+            } catch (\Throwable $e) {
+                call_user_func_array(array(new errorController, 'index'), []);
+            }
         }
     }
 ?>
