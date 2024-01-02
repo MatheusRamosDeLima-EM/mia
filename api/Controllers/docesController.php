@@ -9,7 +9,8 @@
         }
         
         public function info($param = []) {
-            print_r($param);
+            echo($param);
+            echo($param[0]);
             require_once $this->productsPath();
 
             function verifyProductInURIAndProducts($products, $productParam) {
@@ -19,7 +20,7 @@
                 return false;
             }
 
-            if (empty($param) || !verifyProductInURIAndProducts($products, $param[0])) {
+            if (!verifyProductInURIAndProducts($products, $param[0])) {
                 call_user_func_array(array(new errorController, 'index'), []);
             } else {
                 $productParam = $param[0];
