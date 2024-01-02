@@ -8,7 +8,7 @@
             $this->loadTemplate('doces/index', $products);
         }
         
-        public function info($param = []) {
+        public function info($param) {
             require_once $this->productsPath();
 
             function verifyProductInURIAndProducts($products, $productParam) {
@@ -18,6 +18,7 @@
                 return false;
             }
 
+            echo count($param);
             if (!verifyProductInURIAndProducts($products, $param)) {
                 call_user_func_array(array(new errorController, 'index'), []);
             } else {
