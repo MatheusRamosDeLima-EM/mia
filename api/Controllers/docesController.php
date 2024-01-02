@@ -18,18 +18,14 @@
                 return false;
             }
 
-            if (empty($param)) {
-                call_user_func_array(array(new docesController, 'index'), []);
+            if (count($param) != 1 || !verifyProductInURIAndProducts($products, $param[0])) {
+                call_user_func_array(array(new errorController, 'index'), []);
             } else {
                 $productParam = $param[0];
-                if (!verifyProductInURIAndProducts($products, $productParam)) {
-                    call_user_func_array(array(new errorController, 'index'), []);
-                } else {
-                    $this->setTitle($products[$productParam]->__get('name') . ' - MIA');
-                    $this->setStyle('doces/info');
-                    $this->setScript('doces/info');
-                    $this->loadTemplate('doces/info', ['products' => $products, 'productId' => $productParam]);
-                }
+                $this->setTitle($products[$productParam]->__get('name') . ' - MIA');
+                $this->setStyle('doces/info');
+                $this->setScript('doces/info');
+                $this->loadTemplate('doces/info', ['products' => $products, 'productId' => $productParam]);
             }
         }
 
