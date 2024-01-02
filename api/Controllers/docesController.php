@@ -18,7 +18,7 @@
                 return false;
             }
 
-            if (count($param) != 1 || !verifyProductInURIAndProducts($products, $param[0])) {
+            if (empty($param) || !verifyProductInURIAndProducts($products, $param[0])) {
                 call_user_func_array(array(new errorController, 'index'), []);
             } else {
                 $productParam = $param[0];
