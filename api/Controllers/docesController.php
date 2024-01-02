@@ -9,6 +9,7 @@
         }
         
         public function info($param = []) {
+            print_r($param);
             require_once $this->productsPath();
 
             function verifyProductInURIAndProducts($products, $productParam) {
