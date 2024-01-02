@@ -18,12 +18,10 @@
                 return false;
             }
 
-            echo "<p>$param</p>";
-            echo '<p>'.count($param).'</p>';
-            if (!verifyProductInURIAndProducts($products, $param)) {
+            if (count($param) != 1 || !verifyProductInURIAndProducts($products, $param[0])) {
                 call_user_func_array(array(new errorController, 'index'), []);
             } else {
-                $productParam = $param;
+                $productParam = $param[0];
                 $this->setTitle($products[$productParam]->__get('name') . ' - MIA');
                 $this->setStyle('doces/info');
                 $this->setScript('doces/info');
