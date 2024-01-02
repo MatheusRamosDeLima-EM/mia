@@ -18,7 +18,8 @@
                 return false;
             }
 
-            echo count($param);
+            echo "<p>$param</p>";
+            echo '<p>'.count($param).'</p>';
             if (!verifyProductInURIAndProducts($products, $param)) {
                 call_user_func_array(array(new errorController, 'index'), []);
             } else {
