@@ -9,8 +9,6 @@
         }
         
         public function info($param = []) {
-            echo($param);
-            echo($param[0]);
             require_once $this->productsPath();
 
             function verifyProductInURIAndProducts($products, $productParam) {
@@ -20,10 +18,10 @@
                 return false;
             }
 
-            if (!verifyProductInURIAndProducts($products, $param[0])) {
+            if (!verifyProductInURIAndProducts($products, $param)) {
                 call_user_func_array(array(new errorController, 'index'), []);
             } else {
-                $productParam = $param[0];
+                $productParam = $param;
                 $this->setTitle($products[$productParam]->__get('name') . ' - MIA');
                 $this->setStyle('doces/info');
                 $this->setScript('doces/info');
