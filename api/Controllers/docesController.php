@@ -8,7 +8,7 @@
             $this->loadTemplate('doces/index', $products);
         }
         
-        public function info($param) {
+        public function info(array $param) {
             require_once $this->productsPath();
 
             function verifyProductInURIAndProducts($products, $productParam) {

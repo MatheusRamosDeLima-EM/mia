@@ -44,7 +44,7 @@
 
             try {
                 $c = new $controller;
-                call_user_func_array(array($c, $method), $paramethers);
+                call_user_func_array(array($c, $method), array($paramethers));
             } catch (\Throwable $e) {
                 call_user_func_array(array(new errorController, 'index'), []);
             }
