@@ -1,33 +1,35 @@
 <?php
     class docesController extends Controller {
         public function index() {
-            require $this->productsPath();
+            require_once $this->productsPath();
 
             $this->setTitle('Todos os doces - MIA');
             $this->setStyle('doces/index');
             $this->loadTemplate('doces/index', $products);
         }
         
-        public function info($data = []) {
-            require $this->productsPath();
+        public function info($param = []) {
+            require_once $this->productsPath();
 
-            $productName = $data[0];
-            function verifyProductInURIAndProducts($products, $productName) {
+            function verifyProductInURIAndProducts($products, $productParam) {
                 foreach ($products as $productId => $product) {
-                    if ($productName === $productId) return true;
+                    if ($productParam === $productId) return true;
                 }
                 return false;
             }
 
-            if ($data === []) {
+            if (empty($param)) {
                 call_user_func_array(array(new docesController, 'index'), []);
-            } else if (!verifyProductInURIAndProducts($products, $productName)) {
-                call_user_func_array(array(new errorController, 'index'), []);
             } else {
-                $this->setTitle($products[$productName]->__get('name') . ' - MIA');
-                $this->setStyle('doces/info');
-                $this->setScript('doces/info');
-                $this->loadTemplate('doces/info', ['products' => $products, 'productId' => $productName]);
+                $productParam = $param[0];
+                if (!verifyProductInURIAndProducts($products, $productParam)) {
+                    call_user_func_array(array(new errorController, 'index'), []);
+                } else {
+                    $this->setTitle($products[$productParam]->__get('name') . ' - MIA');
+                    $this->setStyle('doces/info');
+                    $this->setScript('doces/info');
+                    $this->loadTemplate('doces/info', ['products' => $products, 'productId' => $productParam]);
+                }
             }
         }
 
